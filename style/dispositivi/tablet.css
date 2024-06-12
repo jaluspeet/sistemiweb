@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+    .article-box p{
+        font-size: 1.7rem;
+    }
+}

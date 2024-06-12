@@ -1,138 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 	<!-- META -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>PixiJS</title>
 
 	<!-- CDN -->
+	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="https://unpkg.com/vue-router@4"></script>
+
+	<!-- PIXI -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
 
 	<!-- LOCAL -->
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	<link rel="stylesheet" href="main.css">
-	<script src="main.js"></script>
+	<link rel="stylesheet" href="style/main.css">
+
+	<!-- JS -->
+	<script type="module" src="src/main.js"></script>
 </head>
 
-<body class="vh-100 overflow-auto">
 
-	<!-- VUE ROOT-->
-	<div id="app">
+<body class="d-flex flex-column vh-100 overflow-auto">
+	<div class="flex-grow-1">
 
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg navbar-dark border-bottom">
+		<!-- VUE ROOT-->
+		<div id="app">
 
-			<!-- Pulsante per ritorno alla home -->
-			<a class="navbar-brand" href="index.html">
-				<img src="images/logo.svg" width="40" height="40" alt="">
-			</a>
-			<button class="navbar-toggler shadow-none border-0 navbar-dark custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- Elementi della navbar-->
-			<div class=" collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link" href="Argomento.html">Argomento</a></li>
-					<li class="nav-item"><a class="nav-link" href="JSon.html">JSON</a></li>
-					<li class="nav-item"><a class="nav-link" href="Crud.html">CRUD</a></li>
-				</ul>
+			<!-- Navbar -->
+			<nav class="dark-box navbar navbar-expand-lg navbar-dark px-3">
 
-			</div>
-		</nav>
+				<!-- Pulsante per ritorno alla home -->
+				<router-link class="navbar-brand" to="/">
+					<img src="images/logo.svg" width="40" height="40" alt="">
+				</router-link>
+				<button class="navbar-toggler shadow-none border-0 navbar-dark custom-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		<!-- CONTAINER PRINCIPALE -->
-		<div class="container">
-			<div class="row">
-
-				<!-- TITOLO (PIXI) -->
-				<div id="pixi" class="col-md-3">
+				<!-- Elementi della navbar-->
+				<div class=" collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><router-link class="nav-link" to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link" to="/json">JSON</router-link></li>
+						<li class="nav-item"><router-link class="nav-link" to="/crud">CRUD</router-link></li>
+					</ul>
 				</div>
 
-				<!-- INTRODUZIONE-->
-				<div class="col-md-9">
-					<section class="mt-4 article-box">
-						<h1>Testo che gira!!</h1>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, officiis magni unde
-							veritatis, accusamus doloremque similique doloribus amet nesciunt corporis reiciendis
-							quibusdam nihil ad commodi illum nisi, fugiat culpa. Consequuntur?
-						</p>
-					</section>
+				<!-- TODO: far fare qualcosa al bottone -->
+				<button type="button">Bottone!</button>
+			</nav>
+
+			<div class="container">
+				<div class="row">
+
+					<!-- Titolo (Pixi) -->
+					<div id="pixi" class="col-md-4">
+					</div>
+
+					<!-- Introduzione-->
+					<div class="col-md-8">
+						<section class="container mt-5 mb-5 dark-box article-box">
+							<h1>Testo che gira!!</h1>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, officiis magni unde
+								veritatis, accusamus doloremque similique doloribus amet nesciunt corporis reiciendis
+								quibusdam nihil ad commodi illum nisi, fugiat culpa. Consequuntur?
+							</p>
+						</section>
+					</div>
 				</div>
 			</div>
 
-			<!-- CONTENUTO -->
-			<section class="mt-4 article-box">
-				<h1>Cos'è PixiJS?</h1>
-				<p>
-					PixiJS è un sistema di rendering open source web-based che offre ottime prestazioni per giochi,
-					visualizzazione dati e altri progetti ad alta intensità grafica. Utilizza WebGL, una API
-					(Application Programming Interface) JavaScript di grafica 2D e 3D sul browser, per visualizzare
-					immagini e
-					altri contenuti 2D. PixiJS rimpiazza Flash nel mondo moderno di
-					HTML5 e provvede migliori performance e feature rispetto al suo antenato.
-					Perfetto per giochi nline, contenuti educativi, pubblicità interattive, visualizzazione delle informazioni, ...per ogni
-                    web-based applicationi che richiede una grafica complessa.
-				</p>
-			</section>
+			<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
+			<div class="container">
+				<router-view></router-view>
+			</div>
 
-			<section class="container mt-4 article-box">
-				<h1>Cosa non è PixiJS</h1>
-				<ul class="lista">
-					<li>
-						<h2>FRAMEWORK</h2>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere impedit error aperiam ullam
-							quia accusamus possimus mollitia animi ipsum voluptates officiis dolor est eveniet commodi
-							qui illum at, laudantium repellendus!
-						</p>
-					</li>
-
-					<li>
-						<h2>3D RENDERER</h2>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus harum animi quos eos hic
-							minus aliquid asperiores, magni accusamus rerum, sint consequatur cupiditate corrupti
-							deleniti, dignissimos provident fugit quas ipsa.
-						</p>
-					</li>
-
-					<li>
-						<h2>APPLICAZIONE MOBILE</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at quae necessitatibus
-							id voluptatem esse quas commodi repellat in assumenda error sint quasi molestiae dolor ipsam
-							quos vero, omnis quibusdam!
-						</p>
-					</li>
-
-					<li>
-						<h2>LIBRERIA INTERFACCIA UTENTE</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ad sed laudantium. Odit
-							minus incidunt recusandae a suscipit ipsa alias ullam voluptatem! Possimus, ea repellat non
-							dolorem obcaecati consequatur at.
-						</p>
-					</li>
-
-					<li>
-						<h2>DATA STORE</h2>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sapiente aperiam soluta
-							possimus unde velit esse, illo consequuntur quos, in quis. Impedit magni nisi ex, nemo quae
-							accusamus dolorem rem!
-						</p>
-					</li>
-				</ul>
-			</section>
 		</div>
-
 	</div>
+
+	<!-- Footer -->
+	<footer class="text-white dark-box mt-4">
+		<div class="container text-center py-3">
+			<p>2024 - Spitaleri Jacopo, Bagga Naman</p>
+		</div>
+	</footer>
 </body>
 
 </html>
