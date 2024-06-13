@@ -1,0 +1,20 @@
+.text-adaptive {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.text-adaptive:hover {
+    color: var(--primary-color-alt);
+    text-decoration: double;
+}
+
+.text-adaptive:active {
+    color: var(--primary-color);
+}
+
+.text-adaptive:visited {
+    color: var(--text-color);
+}

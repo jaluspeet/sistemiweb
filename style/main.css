@@ -1,24 +1,13 @@
+/* colori */
+@import url('./colori/colori.css');
+
 /* dispositivi */
 @import url('./dispositivi/tablet.css');
 @import url('./dispositivi/telefono.css');
 
 /* classi */
 @import url('./classi/article-box.css');
-@import url('./classi/dark-box.css');
 @import url('./classi/button.css');
-
-:root {
-    --primary-color: #e72364;
-    --primary-color-alt: #ee6897;
-    --translucent-color: rgba(0, 0, 0, 0.4);
-    --translucent-color-alt: rgba(0, 0, 0, 0.2);
-    --text-color: white;
-    --border-color: #4c3f52bb;
-}
-
-body {
-    background-color: #191919;
-    background-image: url('../images/background.svg');
-    background-position: center;
-    background-repeat: repeat;
-}
+@import url('./classi/body.css');
+@import url('./classi/wallpaper.css');
+@import url('./classi/text-adaptive.css');

@@ -1,5 +1,0 @@
-.dark-box {
-    background-color: var(--translucent-color);
-    color: var(--text-color);
-    backdrop-filter: blur(5px);
-}

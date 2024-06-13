@@ -5,7 +5,7 @@
 <head>
 	<!-- META -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
 
 	<title>PixiJS</title>
 
@@ -37,20 +37,21 @@
 		<div id="app">
 
 			<!-- Navbar -->
-			<nav class="dark-box navbar navbar-expand-lg navbar-dark px-3">
+			<nav class="navbar navbar-expand-lg wallpaper px-3">
 
 				<!-- Pulsante per ritorno alla home -->
 				<router-link class="navbar-brand" to="/">
 					<img src="images/logo.svg" width="40" height="40" alt="">
 				</router-link>
-				<button class="navbar-toggler shadow-none border-0 navbar-dark custom-toggler" type="button"
+
+				<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- Elementi della navbar-->
-				<div class=" collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><router-link class="nav-link" to="/argomento">Argomento</router-link></li>
 						<li class="nav-item"><router-link class="nav-link" to="/json">JSON</router-link></li>
@@ -71,7 +72,7 @@
 
 					<!-- Introduzione-->
 					<div class="col-md-8">
-						<section class="container mt-5 mb-5 dark-box article-box">
+						<section class="container mt-5 mb-5 article-box">
 							<h1>Testo che gira!!</h1>
 							<p>
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, officiis magni unde
@@ -84,15 +85,13 @@
 			</div>
 
 			<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
-			<div class="container">
-				<router-view></router-view>
-			</div>
+			<router-view></router-view>
 
 		</div>
 	</div>
 
 	<!-- Footer -->
-	<footer class="text-white dark-box mt-4">
+	<footer class="wallpaper text-adaptive mt-4">
 		<div class="container text-center py-3">
 			<p>2024 - Spitaleri Jacopo, Bagga Naman</p>
 		</div>

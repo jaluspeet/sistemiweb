@@ -1,0 +1,5 @@
+.wallpaper {
+    background-image: var(--background-image);
+    background-position: center;
+    background-repeat: repeat;
+}
