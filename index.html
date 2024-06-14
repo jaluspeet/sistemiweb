@@ -35,33 +35,34 @@
 
 		<!-- VUE ROOT-->
 		<div id="app">
+					
+				
+					<!-- Navbar -->
+					<nav class="navbar navbar-expand-lg px-3 wallpaper">
 
-			<!-- Navbar -->
-			<nav class="navbar navbar-expand-lg px-3">
+						<!-- Pulsante per ritorno alla home -->
+						<router-link class="navbar-brand" to="/">
+							<img src="images/logo.svg" width="40" height="40" alt="">
+						</router-link>
 
-				<!-- Pulsante per ritorno alla home -->
-				<router-link class="navbar-brand" to="/">
-					<img src="images/logo.svg" width="40" height="40" alt="">
-				</router-link>
+						<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
+							data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
-				<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+						<!-- Elementi della navbar-->
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item"><router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link></li>
+								<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
+								<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
+							</ul>
+						</div>
 
-				<!-- Elementi della navbar-->
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link" to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link" to="/json">JSON</router-link></li>
-						<li class="nav-item"><router-link class="nav-link" to="/crud">CRUD</router-link></li>
-					</ul>
-				</div>
-
-				<!-- TODO: far fare qualcosa al bottone -->
-				<button type="button">Bottone!</button>
-			</nav>
+						<!-- TODO: far fare qualcosa al bottone -->
+						<button type="button">Bottone!</button>
+					</nav>
 
 			<div class="container">
 				<div class="row">
@@ -79,7 +80,7 @@
 								unde
 								veritatis, accusamus doloremque similique doloribus amet nesciunt corporis
 								reiciendis
-								quibusdam nihil ad commodi illum nisi, fugiat culpa. Consequuntur?
+								quibusdam nihil ad commodi illum nisi, fugiat culpa. Consequuntur? 
 							</p>
 						</section>
 					</div>
