@@ -3,3 +3,13 @@
         font-size: 1.9rem;
     }
 }
+@media (max-width: 380px) {
+    .article-box p{
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 280px) {
+    .article-box p{
+        font-size: 1.9rem;
+    }
+}

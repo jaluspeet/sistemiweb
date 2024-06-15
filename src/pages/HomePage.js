@@ -20,43 +20,43 @@ const HomePage = {
                 <li>
                     <h2>FRAMEWORK</h2>
                     <p>
-                        
+                        PixiJS è un motore di rendering e supporta funzionalità aggiuntive ma non è un framework come Unity o Phaser.
+                        I framework sono stati progettati per le fondamenta di un gioco come ad esempio la gestione delle impostazioni
+                        dell'utente, riproduzione della musica, scripting degli oggetti ed ecc... PixiJS è stato progettato per fare una cosa
+                        per bene, ovvero: renderizzare i contenuti grafici.
                     </p>
                 </li>
 
                 <li>
                     <h2>3D RENDERER</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus harum animi quos eos hic
-                        minus aliquid asperiores, magni accusamus rerum, sint consequatur cupiditate corrupti
-                        deleniti, dignissimos provident fugit quas ipsa.
+                        PixiJS è stato realizzato per il 2D, ma se si desidera eseguire il rendering di modelli 3D,
+                         ci sono altre librerie che permettono di farlo (babylon.js o three.js).
                     </p>
                 </li>
 
                 <li>
                     <h2>APPLICAZIONE MOBILE</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at quae necessitatibus
-                        id voluptatem esse quas commodi repellat in assumenda error sint quasi molestiae dolor ipsam
-                        quos vero, omnis quibusdam!
+                        Con PixiJS si possono realizzare giochi per i telefoni ma bisogna utilizzare un sistemi come
+                         Apache Cordova. PixiJS non fornisce accesso alla fotocamera, ai servizi di localizzazione, alle notiche ed ecc...
                     </p>
                 </li>
 
                 <li>
                     <h2>LIBRERIA INTERFACCIA UTENTE</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ad sed laudantium. Odit
-                        minus incidunt recusandae a suscipit ipsa alias ullam voluptatem! Possimus, ea repellat non
-                        dolorem obcaecati consequatur at.
+                        PixiJS permette di realizzare la propria interfaccia utente utilizzando alcune delle sue funzionalità
+                         ma non fornisce una libreria pronta all'uso.
                     </p>
                 </li>
 
                 <li>
                     <h2>DATA STORE</h2>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sapiente aperiam soluta
-                        possimus unde velit esse, illo consequuntur quos, in quis. Impedit magni nisi ex, nemo quae
-                        accusamus dolorem rem!
+                        Esistono molte tecnologie che possono essere utilizzate per memorizzare le impostazioni, dati ed ecc... Esistono
+                         i Cookie, archiviazione su server oppure Web Storage. Ci sono molte soluzioni, ognuna con i suoi vantaggi e svantaggi.
+                         Con PixiJs è possibile utilizzare qualsiasi di queste soluzioni, ma non fornisce strumenti di data store.
                     </p>
                 </li>
             </ul>

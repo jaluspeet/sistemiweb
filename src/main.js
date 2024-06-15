@@ -29,7 +29,8 @@ window.onload = function () {
             createText,
         },
     });
-
+    
     app.use(router);
     app.mount('#app');
+
 };
