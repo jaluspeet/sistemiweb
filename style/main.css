@@ -6,6 +6,7 @@
 @import url('./dispositivi/telefono.css');
 
 /* classi */
+@import url('./classi/navbartoggler.css');
 @import url('./classi/article-box.css');
 @import url('./classi/button.css');
 @import url('./classi/body.css');

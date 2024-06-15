@@ -20,9 +20,7 @@ const HomePage = {
                 <li>
                     <h2>FRAMEWORK</h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere impedit error aperiam ullam
-                        quia accusamus possimus mollitia animi ipsum voluptates officiis dolor est eveniet commodi
-                        qui illum at, laudantium repellendus!
+                        
                     </p>
                 </li>
 
