@@ -1,6 +1,6 @@
 const HomePage = {
     template: `
-        <section class="container mt-6 article-box">
+        <section class="article-box">
             <h1>Cos'è PixiJS?</h1>
             <p>
                 PixiJS è un sistema di rendering open source web-based che offre ottime prestazioni per giochi,
@@ -14,7 +14,7 @@ const HomePage = {
             </p>
         </section>
 
-        <section class="container mt-6 article-box">
+        <section class="article-box">
             <h1>Cosa non è PixiJS</h1>
             <ul class="list-unstyled">
                 <li>
