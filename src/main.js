@@ -26,7 +26,7 @@ window.onload = function () {
     const app = Vue.createApp({
         mounted() {
             const pixiBaseInstance = new pixiBase();
-            pixiBaseInstance.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 1, transparent: true});
+            pixiBaseInstance.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 1 });
         },
     });
 

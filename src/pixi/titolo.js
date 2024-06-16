@@ -13,22 +13,17 @@
  */
 export const pixiTitolo = (app, options) => {
 
-    // lista colori
-    const colors = [0xff0000, 0x00ff00, 0x0000ff, 0xffff00, 0xff00ff, 0x00ffff];
-
     // impostazioni stile iniziali
     const textStyle = new PIXI.TextStyle({
         fontFamily: 'Arial',
         fontWeight: 'bold',
         fontSize: 40,
         fontStyle: 'italic',
-        fill: colors[options.colorIndex % colors.length],
         wordWrap: true,
         wordWrapWidth: 440,
-        stroke: { color: '#4a1850', width: 5, join: 'round' },
+        fill: '#E72264',
+        stroke: { color: '#4A1850', width: 5, join: 'round' },
         dropShadow: {
-            color: '#000000',
-            blur: 4,
             angle: Math.PI / 6,
             distance: 6,
         },
@@ -57,26 +52,27 @@ export const pixiTitolo = (app, options) => {
         text.skew.x = Math.sin(time) * options.rotationSpeed;
         text.skew.y = Math.cos(time) * options.rotationSpeed;
 
+        // eventi per cambiare velocità di rotazione e colore
+        const buttonSpeedPlus = document.getElementById("titleSpeedPlus");
+        const buttonSpeedMinus = document.getElementById("titleSpeedMinus");
+        const buttonColor = document.getElementById("titleColor");
+
+        buttonSpeedPlus.addEventListener('click', () => {
+            options.rotationSpeed += 0.01;
+        });
+
+        buttonSpeedMinus.addEventListener('click', () => {
+            options.rotationSpeed -= 0.01;
+        });
+
+        buttonColor.addEventListener('click', () => {
+            const color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+            textStyle.fill = color;
+            text.style = textStyle;
+        });
+
         requestAnimationFrame(updateSkew);
     };
+
     updateSkew();
-
-
-    // eventi per cambiare velocità di rotazione e colore
-    const buttonSpeedPlus = document.getElementById("titleSpeedPlus");
-    const buttonSpeedMinus = document.getElementById("titleSpeedMinus");
-    const buttonColor = document.getElementById("titleColor");
-
-    buttonSpeedPlus.addEventListener('click', () => {
-        options.rotationSpeed += 1;
-    });
-
-    buttonSpeedMinus.addEventListener('click', () => {
-        options.rotationSpeed -= 1;
-    });
-
-    buttonColor.addEventListener('click', () => {
-        options.colorIndex += 1;
-        text.style.fill = colors[options.colorIndex % colors.length];
-    });
 };
