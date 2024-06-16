@@ -39,6 +39,12 @@ export const pixiTitolo = (app, options) => {
     // aggiungi al canvas
     app.stage.addChild(text);
 
+    // eventi per cambiare velocità di rotazione e colore
+    const buttonSpeedPlus = document.getElementById("titleSpeedPlus");
+    const buttonSpeedMinus = document.getElementById("titleSpeedMinus");
+    const buttonColor = document.getElementById("titleColor");
+    const buttonReset = document.getElementById("titleReset");
+
     // animazione
     let time = 0;
 
@@ -52,11 +58,6 @@ export const pixiTitolo = (app, options) => {
         text.skew.x = Math.sin(time) * options.rotationSpeed;
         text.skew.y = Math.cos(time) * options.rotationSpeed;
 
-        // eventi per cambiare velocità di rotazione e colore
-        const buttonSpeedPlus = document.getElementById("titleSpeedPlus");
-        const buttonSpeedMinus = document.getElementById("titleSpeedMinus");
-        const buttonColor = document.getElementById("titleColor");
-
         buttonSpeedPlus.addEventListener('click', () => {
             options.rotationSpeed += 0.001;
         });
@@ -69,6 +70,10 @@ export const pixiTitolo = (app, options) => {
             const color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
             textStyle.fill = color;
             text.style = textStyle;
+        });
+
+        buttonReset.addEventListener('click', () => {
+            options.rotationSpeed = 0;
         });
 
         requestAnimationFrame(updateSkew);
