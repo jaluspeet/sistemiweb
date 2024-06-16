@@ -4,19 +4,19 @@
  * Crea una nuova applicazione PIXI e la aggiunge al DOM.
  * @return {void}
  */
-export const initializePixi = function () {
-    const pixiContainer = document.getElementById('pixi');
+export const initializePixi = function (containerId, isTransparent = true) {
+    const pixiContainer = document.getElementById(containerId);
 
     this.app = new PIXI.Application({
         width: pixiContainer.offsetWidth,
         height: pixiContainer.offsetHeight,
         antialias: true,
         autodensity: true,
-        transparent: true,
+        transparent: isTransparent
     });
 
     pixiContainer.appendChild(this.app.view);
-    this.createText('PixiJS!!!', 5);
+    this.createText('PixiJS!!!', titleSpeed);
 };
 
 
