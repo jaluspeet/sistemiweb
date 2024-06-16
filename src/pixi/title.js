@@ -6,6 +6,7 @@
  */
 export const initializePixi = function () {
     const pixiContainer = document.getElementById('pixi');
+
     this.app = new PIXI.Application({
         width: pixiContainer.offsetWidth,
         height: pixiContainer.offsetHeight,
@@ -13,8 +14,9 @@ export const initializePixi = function () {
         autodensity: true,
         transparent: true,
     });
+
     pixiContainer.appendChild(this.app.view);
-    this.createText('PixiJS!!!', 1);
+    this.createText('PixiJS!!!', 5);
 };
 
 
@@ -25,7 +27,6 @@ export const initializePixi = function () {
  * @return {void}
  */
 export const createText = function (textString, rotationSpeed) {
-
     const textStyle = new PIXI.TextStyle({
         fontFamily: 'Arial',
         fontWeight: 'bold',

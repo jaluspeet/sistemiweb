@@ -4,13 +4,8 @@
     font-weight: 500;
 }
 
-.text-adaptive:visited {
-    color: var(--text-color);
-}
-
 .text-adaptive:hover {
     color: var(--primary-color-alt);
-    transform: scale(1.02);
     text-decoration: underline;
 }
 
