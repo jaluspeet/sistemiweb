@@ -7,15 +7,19 @@ button {
     cursor: pointer;
     text-align: center;
     box-shadow: 4px 4px var(--primary-color-alt);
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
     transition: transform 0.3s ease;
 }
 
 button:hover {
-    filter:hue-rotate(20deg);
+    filter: hue-rotate(20deg);
 }
 
 button:active {
     transform: scale(0.95);
     box-shadow: 2px 2px var(--primary-color-alt);
 }
-
