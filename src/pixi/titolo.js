@@ -58,11 +58,11 @@ export const pixiTitolo = (app, options) => {
         const buttonColor = document.getElementById("titleColor");
 
         buttonSpeedPlus.addEventListener('click', () => {
-            options.rotationSpeed += 0.01;
+            options.rotationSpeed += 0.001;
         });
 
         buttonSpeedMinus.addEventListener('click', () => {
-            options.rotationSpeed -= 0.01;
+            options.rotationSpeed -= 0.001;
         });
 
         buttonColor.addEventListener('click', () => {
