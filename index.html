@@ -51,15 +51,9 @@
 				<!-- Elementi della navbar-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link>
-						</li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link>
-						</li>
-
-						<!-- TODO: far fare qualcosa al bottone -->
-						<button type="button">Bottone!</button>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
 					</ul>
 				</div>
 			</nav>
@@ -67,47 +61,39 @@
 			<div class="container">
 				<div class="row">
 
+					<!-- Pulsante + / - per cambiare la velocità del titolo -->
+					<div class="col-md-1">
+						<div class="container">
+							<div class="row justify-content-center">
+								<section class="container mt-5">
+
+									<div class="row mt-4 d-flex justify-content-center">
+										<button type="button" id="titleColor">🌈</button>
+									</div>
+
+									<div class="row mt-4 d-flex justify-content-center">
+										<button type="button" id="titleSpeedPlus">+</button>
+									</div>
+
+									<div class="row mt-4 d-flex justify-content-center">
+										<button type="button" id="titleSpeedMinus">-</button>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+
 					<!-- Titolo (Pixi) -->
-					<div class="col-md-4" id="pixi-title"></div>
+					<div class="col-md-4 mr-md-4" id="pixi-titolo"></div>
 
-					<!-- Separatore -->
-					<div class="col-md-2"></div>
-
-					<!-- Introduzione-->
-					<div class="col-md-5">
-						<section class="container mt-5 mb-5 article-box">
+					<!-- Introduzione -->
+					<div class="col-md-7">
+						<section class="container mt-5 article-box">
 							<h1>Testo che gira!!</h1>
 							<p>
 								Questo testo che gira all'infinito (sempre se non si cambia pagina) è stato realizzato
 								con PixiJS!!!
 							</p>
-						</section>
-					</div>
-
-					<div class="col-md-1">
-						<section class="container mt-5 mb-5 article-box">
-
-							<!-- separator -->
-							<div class="row mt-4"></div>
-
-							<div class="row">
-								<div class="col">
-									<button type="button" id="titleSpeedPlus">+</button>
-								</div>
-							</div>
-
-							<!-- separator -->
-							<div class="row mt-4"></div>
-
-							<div class="row">
-								<div class="col">
-									<button type="button" id="titleSpeedMinus">-</button>
-								</div>
-							</div>
-
-							<!-- separator -->
-							<div class="row mt-4"></div>
-
 						</section>
 					</div>
 				</div>

@@ -1,13 +1,15 @@
-// pagine
+// pagine router
 import HomePage from './pages/HomePage.js';
 import ArgomentoPage from './pages/ArgomentoPage.js';
 import JSONPage from './pages/JSONPage.js';
 import CRUDPage from './pages/CRUDPage.js';
 
-// script
-import { initializePixi, createText } from './pixi/title.js';
+// istanze di Pixi
+import { pixiBase } from './pixi/setup.js';
+import { pixiTitolo } from './pixi/titolo.js';
 
 window.onload = function () {
+
     const routes = [
         { path: '/', component: HomePage },
         { path: '/argomento', component: ArgomentoPage },
@@ -20,17 +22,14 @@ window.onload = function () {
         routes
     });
 
+
     const app = Vue.createApp({
         mounted() {
-            this.initializePixi();
-        },
-        methods: {
-            initializePixi,
-            createText,
+            const pixiBaseInstance = new pixiBase();
+            pixiBaseInstance.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 1, transparent: true});
         },
     });
-    
+
     app.use(router);
     app.mount('#app');
-
 };

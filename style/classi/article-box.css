@@ -4,12 +4,19 @@
     margin-bottom: 20px;
     color: var(--text-color);
     background-color: var(--translucent-color);
+    box-shadow: 8px 8px var(--border-color);
     backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
 }
 
 .article-box:hover {
-    background-color: var(--border-color);
+    filter: hue-rotate(20deg);
     box-shadow: 8px 8px var(--primary-color);
+}
+
+.article-box:active {
+    transform: scale(0.95);
+    box-shadow: 4px 4px var(--primary-color);
 }
 
 .article-box h1 {

@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #ba66a8;
+    --primary-color: #d35bb9;
     --primary-color-alt: #ee6897;
 
     --translucent-color:  #a69dab22;
-    --border-color: #a69dab66;
+    --border-color: #dfa5ffb3;
 
     --solid-color: #eeeeee;
-    --text-color: #191919;
+    --text-color: #3c3c3c;
     --animation-color: #6b0c5e;
     --background-image: url('../../images/background-l.svg');
 }

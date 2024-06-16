@@ -1,7 +1,12 @@
 .text-adaptive {
     color: var(--text-color);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.text-adaptive:active {
+    transform: scale(0.95);
 }
 
 .text-adaptive:hover {
