@@ -13,7 +13,7 @@
  */
 export const pixiTitolo = (app, options, container) => {
 
-    const fonts = ["Arial", "Verdana", "Georgia", "Times New Roman", "Courier New", "Brush Script MT", "Comic Sans MS", "Impact", "Lucida Console", "Lucida Sans Unicode", "Palatino Linotype", "Tahoma", "Trebuchet MS", "Webdings", "Wingdings"];
+    const fonts = ["Arial", "Verdana", "Georgia", "Times New Roman", "Courier New", "Brush Script MT", "Comic Sans MS", "Impact", "Lucida Console", "Tahoma", "Trebuchet MS", "Webdings"];
 
     // impostazioni stile iniziali
     const textStyle = new PIXI.TextStyle({
