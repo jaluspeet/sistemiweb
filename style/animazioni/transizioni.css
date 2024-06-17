@@ -1,0 +1,17 @@
+.trans-enter-from {
+  opacity: 0;
+  transform: translate(-100%, 0);
+}
+
+.trans-enter-active {
+ transition: all 0.2s;
+}
+
+.trans-leave-to {
+  opacity: 0 ;
+  transform: translate(100%, 0);
+}
+
+.trans-leave-active {
+  transition: all 0.2s;
+}

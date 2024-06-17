@@ -1,5 +1,6 @@
 const ArgomentoPage = {
     template: `
+    <div class="container mt-2">
         <section class="article-box">
             <h1>Vaffanculo!!!</h1>
             <p>
@@ -13,7 +14,8 @@ const ArgomentoPage = {
                 visualizzazione delle informazioni e in generale per qualsiasi contesto WebGL 2D.
             </p>
         </section>
-        `
+    </div>
+    `
 };
 
 export default ArgomentoPage;

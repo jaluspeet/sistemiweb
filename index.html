@@ -105,9 +105,11 @@
 			</div>
 
 			<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
-			<div class="container mt-2">
-				<router-view></router-view>
-			</div>
+			<router-view v-slot="{ Component }">
+				<transition name="trans" mode="out-in">
+				  <component :is="Component" />
+				</transition>
+			</router-view>
 
 		</div>
 	</div>

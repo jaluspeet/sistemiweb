@@ -1,5 +1,6 @@
 const HomePage = {
     template: `
+    <div class="container mt-2">
         <section class="article-box">
             <h1>Cos'è PixiJS?</h1>
             <p>
@@ -61,6 +62,7 @@ const HomePage = {
                 </li>
             </ul>
         </section>
+    </div>
     `
 };
 
