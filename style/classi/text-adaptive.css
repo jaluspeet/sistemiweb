@@ -2,6 +2,7 @@
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: bold;
+    text-shadow: 2px 3px var(--solid-color);
     transition: transform 0.3s ease;
 }
 
@@ -12,6 +13,7 @@
 .text-adaptive:hover {
     color: var(--primary-color-alt);
     text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .text-adaptive:active {

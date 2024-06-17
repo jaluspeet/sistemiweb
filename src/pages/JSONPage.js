@@ -1,7 +1,8 @@
 const JSONPage = {
     template: `
     <div class="container mt-4">
-        <section class="article-box">
+
+        <section class="article-box mt-4">
             <h1>PALLE!!!</h1>
             <p>
                 PixiJS è un sistema di rendering open source web-based che offre ottime prestazioni per giochi,
@@ -14,6 +15,7 @@ const JSONPage = {
                 visualizzazione delle informazioni e in generale per qualsiasi contesto WebGL 2D.
             </p>
         </section>
+
     </div>
     `
 };

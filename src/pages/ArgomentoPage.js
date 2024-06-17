@@ -1,7 +1,7 @@
 const ArgomentoPage = {
     template: `
     <div class="container mt-4">
-        <section class="article-box">
+        <section class="article-box mt-4">
             <h1>Vaffanculo!!!</h1>
             <p>
                 PixiJS è un sistema di rendering open source web-based che offre ottime prestazioni per giochi,

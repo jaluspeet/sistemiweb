@@ -39,7 +39,7 @@
 			<nav class="navbar navbar-expand-lg px-3 wallpaper">
 
 				<!-- Pulsante per ritorno alla home -->
-				<router-link class="navbar-brand" to="/">
+				<router-link class="navbar-brand text-adaptive" to="/">
 					<img src="images/logo.svg" width="40" height="40" alt="">
 				</router-link>
 
@@ -52,64 +52,52 @@
 				<!-- Elementi della navbar-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link text-adaptive"to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link></li>
 						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
 						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
 					</ul>
 				</div>
 			</nav>
 
-			<div class="container">
+			<div class="container mt-4">
 				<div class="row">
 
 					<!-- Controlli per il titolo -->
-					<div class="col-md-1">
-						<div class="container">
-							<div class="row justify-content-center">
-								<section class="container mt-4">
-
-									<div class="row mt-2 d-flex justify-content-center">
-										<button type="button" id="titleReset">↺</button>
-									</div>
-
-									<div class="row mt-2 d-flex justify-content-center">
-										<button type="button" id="titleColor">🌈</button>
-									</div>
-
-									<div class="row mt-2 d-flex justify-content-center">
-										<button type="button" id="titleSpeedPlus">+</button>
-									</div>
-
-									<div class="row mt-2 d-flex justify-content-center">
-										<button type="button" id="titleSpeedMinus">-</button>
-									</div>
-								</section>
-							</div>
+					<section class="container col-md-1 mt-5">
+						<div class="row mt-2 d-flex justify-content-center">
+							<button type="button" id="titleRotation">↺</button>
 						</div>
-					</div>
+
+						<div class="row mt-2 d-flex justify-content-center">
+							<button type="button" id="titleColor">🌈</button>
+						</div>
+
+						<div class="row mt-2 d-flex justify-content-center">
+							<button type="button" id="titlePlus">+</button>
+						</div>
+
+						<div class="row mt-2 d-flex justify-content-center">
+							<button type="button" id="titleMinus">-</button>
+						</div>
+
+						<div class="row mt-2 d-flex justify-content-center">
+							<button type="button" id="titleFont">♺</button>
+						</div>
+					</section>
+
 
 					<!-- Titolo (Pixi) -->
-					<div class="col-md-4">
-							<div class="container mt-4 article-box" id="pixi-titolo"></div>
+					<div class="container col-md-10 mt-4 article-box">
+						<div id="pixi-titolo"></div>
 					</div>
 
-					<!-- Introduzione -->
-					<div class="col-md-7">
-						<section class="container mt-4 article-box">
-							<h1>Testo che gira!!</h1>
-							<p>
-								Questo testo che gira all'infinito (sempre se non si cambia pagina) è stato realizzato
-								con PixiJS!!!
-							</p>
-						</section>
-					</div>
 				</div>
 			</div>
 
 			<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
 			<router-view v-slot="{ Component }">
 				<transition name="trans" mode="out-in">
-				  <component :is="Component" />
+					<component :is="Component" />
 				</transition>
 			</router-view>
 
@@ -119,7 +107,7 @@
 	<!-- Footer -->
 	<footer class="wallpaper mt-4">
 		<div class="container text-center text-adaptive py-3">
-			<p>2024 - Spitaleri Jacopo, Bagga Naman</p>
+			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
 		</div>
 	</footer>
 </body>

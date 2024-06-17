@@ -11,18 +11,18 @@
 
  * @return {void}
  */
-export const pixiTitolo = (app, options) => {
+export const pixiTitolo = (app, options, container) => {
+
+    const fonts = ["Arial", "Verdana", "Georgia", "Times New Roman", "Courier New", "Brush Script MT", "Comic Sans MS", "Impact", "Lucida Console", "Lucida Sans Unicode", "Palatino Linotype", "Tahoma", "Trebuchet MS", "Webdings", "Wingdings"];
 
     // impostazioni stile iniziali
     const textStyle = new PIXI.TextStyle({
-        fontFamily: 'Arial',
+        fontFamily: fonts[0],
         fontWeight: 'bold',
-        fontSize: 40,
+        fontSize: app.screen.width / 10,
         fontStyle: 'italic',
         wordWrap: true,
-        wordWrapWidth: 440,
         fill: '#E72264',
-        stroke: { color: '#4A1850', width: 5, join: 'round' },
         dropShadow: {
             angle: Math.PI / 6,
             distance: 6,
@@ -31,7 +31,7 @@ export const pixiTitolo = (app, options) => {
 
     // posizione testo
     const text = new PIXI.Text(options.textString, textStyle);
-    text.x = app.screen.width / 2;
+    text.x = app.screen.width / 4;
     text.y = app.screen.height / 2;
     text.anchor.set(0.5);
     text.skew.set(0, 0);
@@ -39,11 +39,29 @@ export const pixiTitolo = (app, options) => {
     // aggiungi al canvas
     app.stage.addChild(text);
 
-    // eventi per cambiare velocità di rotazione e colore
-    const buttonSpeedPlus = document.getElementById("titleSpeedPlus");
-    const buttonSpeedMinus = document.getElementById("titleSpeedMinus");
+    // eventi per cambiare velocità di proprietà del testo
+    const buttonPlus = document.getElementById("titlePlus");
+    const buttonMinus = document.getElementById("titleMinus");
     const buttonColor = document.getElementById("titleColor");
-    const buttonReset = document.getElementById("titleReset");
+    const buttonRotation = document.getElementById("titleRotation");
+    const buttonFont = document.getElementById("titleFont");
+
+    buttonPlus.addEventListener('click', () => { text.style.fontSize += 10; console.log(text.style.fontSize); });
+    buttonMinus.addEventListener('click', () => { text.style.fontSize -= 10; console.log(text.style.fontSize); });
+    buttonColor.addEventListener('click', () => text.style.fill = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0"));
+    buttonRotation.addEventListener('click', () => options.rotationSpeed += 1);
+    buttonFont.addEventListener('click', () => text.style.fontFamily = fonts[(fonts.indexOf(text.style.fontFamily) + 1) % fonts.length]);
+
+    // ridimensionamento del canvas e del testo in base al container
+    function resize() {
+        app.renderer.resize(container.clientWidth, options.height || 300);
+        text.x = app.screen.width / 2;
+        text.y = app.screen.height / 2;
+        text.style.fontSize = app.screen.width / 10;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
 
     // animazione
     let time = 0;
@@ -57,24 +75,6 @@ export const pixiTitolo = (app, options) => {
         un approccio alternativo (peggiore) poteva essere di limitare il framerate */
         text.skew.x = Math.sin(time) * options.rotationSpeed;
         text.skew.y = Math.cos(time) * options.rotationSpeed;
-
-        buttonSpeedPlus.addEventListener('click', () => {
-            options.rotationSpeed += 0.001;
-        });
-
-        buttonSpeedMinus.addEventListener('click', () => {
-            options.rotationSpeed -= 0.001;
-        });
-
-        buttonColor.addEventListener('click', () => {
-            const color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
-            textStyle.fill = color;
-            text.style = textStyle;
-        });
-
-        buttonReset.addEventListener('click', () => {
-            options.rotationSpeed = 0;
-        });
 
         requestAnimationFrame(updateSkew);
     };

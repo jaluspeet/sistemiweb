@@ -4,6 +4,7 @@ button {
     border: none;
     border-radius: 50px;
     padding: 5px;
+    font-size: 2rem;
     cursor: pointer;
     text-align: center;
     box-shadow: 4px 4px var(--primary-color-alt);
@@ -16,7 +17,7 @@ button {
 }
 
 button:hover {
-    filter: hue-rotate(20deg);
+    filter: hue-rotate(30deg);
 }
 
 button:active {
