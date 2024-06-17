@@ -1,6 +1,6 @@
 const CRUDPage = {
     template: `
-    <div class="container mt-2">
+    <div class="container mt-4">
         <section class="article-box">
             <h1>Ammazzati!!!</h1>
             <p>

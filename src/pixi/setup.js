@@ -12,8 +12,8 @@ export class pixiBase {
         }
 
         const app = new PIXI.Application({
-            width: container.offsetWidth,
-            height: container.offsetHeight,
+            width: options.width || container.offsetWidth,
+            height: options.height || container.offsetHeight,
             antialias: true,
             autodensity: true,
             transparent: true,

@@ -1,6 +1,6 @@
 const JSONPage = {
     template: `
-    <div class="container mt-2">
+    <div class="container mt-4">
         <section class="article-box">
             <h1>PALLE!!!</h1>
             <p>

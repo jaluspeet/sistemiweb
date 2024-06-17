@@ -1,6 +1,6 @@
 const ArgomentoPage = {
     template: `
-    <div class="container mt-2">
+    <div class="container mt-4">
         <section class="article-box">
             <h1>Vaffanculo!!!</h1>
             <p>

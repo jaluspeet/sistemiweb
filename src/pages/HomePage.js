@@ -1,6 +1,6 @@
 const HomePage = {
     template: `
-    <div class="container mt-2">
+    <div class="container mt-4">
         <section class="article-box">
             <h1>Cos'è PixiJS?</h1>
             <p>
