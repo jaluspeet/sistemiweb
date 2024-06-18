@@ -1,4 +1,5 @@
 tbody td:first-child{
-    color: var(--primary-color);
+    color: var(--primary-color-alt);
     font-weight: bold;
+    transition: transform 0.3s ease;
 }

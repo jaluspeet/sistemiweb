@@ -1,25 +1,27 @@
 const JSONPage = {
     template: `
     <div class="container">
-        <div class="row">
-            <table class="col-md-12 m-4 table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Specie</th>
-                        <th scope="col">Pianeta</th>
-                        <th scope="col">Descrizione</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="alieno in alieni" :key="alieno.nome">
-                        <td>{{ alieno.nome }}</td>
-                        <td>{{ alieno.specie }}</td>
-                        <td>{{ alieno.pianeta }}</td>
-                        <td>{{ alieno.descrizione }}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row m-4">
+            <div class="container col-md-11 article-box">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Specie</th>
+                            <th scope="col">Pianeta</th>
+                            <th scope="col">Descrizione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="alieno in alieni" :key="alieno.nome">
+                            <td>{{ alieno.nome }}</td>
+                            <td>{{ alieno.specie }}</td>
+                            <td>{{ alieno.pianeta }}</td>
+                            <td>{{ alieno.descrizione }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     `,
@@ -30,61 +32,61 @@ const JSONPage = {
                     nome: "Four Arms",
                     specie: "Tetramand",
                     pianeta: "Khronos",
-                    descrizione: "Four Arms è un alieno umanoide con quattro braccia. È molto forte e resistente, e può anche allungare e contorcere le sue braccia a piacimento."
+                    descrizione: "Alieno umanoide con quattro braccia, molto forte e resistente."
                 },
                 {
                     nome: "Heatblast",
                     specie: "Pyronite",
                     pianeta: "Pyros",
-                    descrizione: "Heatblast è un alieno simile a una statua di lava che può controllare il fuoco e creare palle di fuoco. È anche in grado di volare e resistere a temperature estreme."
+                    descrizione: "Alieno simile a una statua di lava, controlla il fuoco e vola."
                 },
                 {
                     nome: "XLR8",
                     specie: "Kineceleran",
                     pianeta: "Kinetix",
-                    descrizione: "XLR8 è un alieno simile a un gatto che può correre a velocità incredibili e saltare grandi distanze. È anche in grado di accelerare o rallentare il tempo."
+                    descrizione: "Alieno simile a un gatto, corre velocemente e manipola il tempo."
                 },
                 {
                     nome: "Diamondhead",
                     specie: "Petrosapien",
                     pianeta: "Petropia",
-                    descrizione: "Diamondhead è un alieno con un corpo composto da cristalli organici. Può manipolare e crescere cristalli dal suo corpo."
+                    descrizione: "Alieno composto da cristalli organici, manipola e cresce cristalli."
                 },
                 {
                     nome: "Grey Matter",
                     specie: "Galvan",
                     pianeta: "Galvan Prime",
-                    descrizione: "Grey Matter è un alieno piccolo ma incredibilmente intelligente. È un esperto in tecnologia e meccanica."
+                    descrizione: "Alieno piccolo ma incredibilmente intelligente, esperto in tecnologia."
                 },
                 {
                     nome: "Ripjaws",
                     specie: "Piscciss Volann",
                     pianeta: "Piscciss",
-                    descrizione: "Ripjaws è un alieno acquatico con potenti mascelle e una coda simile a quella di un pesce. È estremamente veloce nell'acqua."
+                    descrizione: "Alieno acquatico con mascelle potenti, veloce nell'acqua."
                 },
                 {
                     nome: "Stinkfly",
                     specie: "Lepidopterran",
                     pianeta: "Lepidopterra",
-                    descrizione: "Stinkfly è un alieno insettoide che può volare e sparare liquidi appiccicosi dai suoi occhi."
+                    descrizione: "Alieno insettoide che vola e spara liquidi appiccicosi."
                 },
                 {
                     nome: "Upgrade",
                     specie: "Galvanic Mechamorph",
                     pianeta: "Galvan B",
-                    descrizione: "Upgrade è un alieno composto da nano-tecnologia vivente. Può fondersi con qualsiasi tecnologia e migliorarla."
+                    descrizione: "Alieno composto da nano-tecnologia, fonde e migliora la tecnologia."
                 },
                 {
                     nome: "Ghostfreak",
                     specie: "Ectonurite",
                     pianeta: "Anur Phaetos",
-                    descrizione: "Ghostfreak è un alieno fantasmagorico che può diventare invisibile e intangibile, oltre a possedere altri."
+                    descrizione: "Alieno fantasmagorico invisibile e intangibile."
                 },
                 {
                     nome: "Wildmutt",
                     specie: "Vulpimancer",
                     pianeta: "Vulpin",
-                    descrizione: "Wildmutt è un alieno bestiale privo di occhi ma dotato di sensi acuti. È molto forte e agile."
+                    descrizione: "Alieno bestiale privo di occhi, forte e agile."
                 }
             ]
         };

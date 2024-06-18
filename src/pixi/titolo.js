@@ -8,7 +8,7 @@
  * Per questa funzione le opzioni esposte sono:
  * @param {string} options.textString - Il testo da visualizzare.
  * @param {number} options.rotationSpeed - La velocità di rotazione del testo.
-
+ *
  * @return {void}
  */
 export const pixiTitolo = (app, options, container) => {

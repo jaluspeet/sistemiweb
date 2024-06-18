@@ -1,0 +1,21 @@
+code {
+    background-color: var(--border-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    display: block;
+    margin: 1em 0;
+    padding: 1em;
+    white-space: pre;
+    overflow-x: auto;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+}
+
+pre {
+    color: var(--primary-color-alt);
+    font-family: monospace;
+}

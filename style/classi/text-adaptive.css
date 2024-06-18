@@ -19,3 +19,7 @@
 .text-adaptive:active {
     color: var(--primary-color);
 }
+
+strong {
+    color: var(--primary-color-alt);
+}
