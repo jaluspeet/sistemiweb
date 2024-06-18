@@ -1,0 +1,11 @@
+.form-control {
+	background-color: var(--border-color);
+	border-color: var(--primary-color);
+	color: var(--text-color);
+}
+
+.form-control:focus {
+	background-color: var(--primary-color);
+	border-color: var(--border-color);
+	color: var(--text-color);
+}
