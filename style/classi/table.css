@@ -1,0 +1,4 @@
+tbody td:first-child{
+    color: var(--primary-color);
+    font-weight: bold;
+}
