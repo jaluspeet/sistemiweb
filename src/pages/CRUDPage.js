@@ -1,6 +1,6 @@
 const CRUDPage = {
   template: `
-  <div class="container mt-3">
+  <div class="container">
     <div class="row">
         <table class="col-md-12 m-4 table table-striped table-hover">
           <thead>
@@ -26,7 +26,7 @@ const CRUDPage = {
     </div>
 
     <div class="row">
-      <section class="article-box col-md-5 m-3">
+      <section class="article-box col-md-5 m-4">
         <h2 class="text-adaptive">Modifica frutto</h2>
         <div v-if="selectedFruit !== null">
           <label class="text-adaptive">Nome:</label>
@@ -42,7 +42,7 @@ const CRUDPage = {
         </div>
       </section>
 
-      <section class="article-box col-md-5 m-3">
+      <section class="article-box col-md-5 m-4">
         <h2 class="text-adaptive">Aggiungi frutto</h2>
         <label class="text-adaptive">Nome:</label>
         <input v-model="newFruit.name" class="form-control"/>

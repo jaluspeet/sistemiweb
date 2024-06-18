@@ -1,0 +1,18 @@
+/* colori */
+@import url('./colori/colori.css');
+
+/* dispositivi */
+/* @import url('./dispositivi/tablet.css');
+@import url('./dispositivi/telefono.css'); */
+
+/* classi */
+@import url('./classi/navbartoggler.css');
+@import url('./classi/article-box.css');
+@import url('./classi/button.css');
+@import url('./classi/body.css');
+@import url('./classi/wallpaper.css');
+@import url('./classi/text-adaptive.css');
+@import url('./classi/table.css');
+
+/* animazioni */
+@import url('./animazioni/transizioni.css');

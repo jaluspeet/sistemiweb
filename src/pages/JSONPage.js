@@ -1,9 +1,8 @@
 const JSONPage = {
     template: `
-    <div class="container article-box mt-3">
-        <h1>Alieni Ben 10 presenti nell'Omnitrix</h1>
-        <div style="overflow-x:auto">
-            <table class="table table-dark custom-table">
+    <div class="container">
+        <div class="row">
+            <table class="col-md-12 m-4 table table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Nome</th>
