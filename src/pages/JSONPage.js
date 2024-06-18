@@ -2,7 +2,7 @@ const JSONPage = {
     template: `
     <div class="container">
         <div class="row m-4">
-            <div class="container col-md-11 article-box">
+            <div class="container table-responsive col-md-11 article-box">
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
