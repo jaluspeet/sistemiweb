@@ -4,8 +4,7 @@
 <head>
 	<!-- META -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PixiJS</title>
 
 	<!-- CDN -->
@@ -28,71 +27,60 @@
 	<script type="module" src="src/main.js"></script>
 </head>
 
-
 <body class="d-flex flex-column vh-100 overflow-auto">
-	<div class="flex-grow-1">
+	<header role="banner">
+		<nav class="navbar navbar-expand-lg wallpaper" role="navigation" aria-label="Main navigation">
+			<!-- Pulsante per ritorno alla home -->
+			<router-link class="navbar-brand px-3 text-adaptive" to="/">
+				<img src="images/logo.svg" width="40" height="40" alt="Logo di Pixi">
+			</router-link>
+			<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Elementi della navbar-->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto px-3 mb-2 mb-lg-0">
+					<li class="nav-item">
+						<router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link>
+					</li>
+					<li class="nav-item">
+						<router-link class="nav-link text-adaptive" to="/json">JSON</router-link>
+					</li>
+					<li class="nav-item">
+						<router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-		<!-- VUE ROOT-->
+	<main role="main" class="flex-grow-1">
 		<div id="app">
-
-			<!-- Navbar -->
-			<nav class="navbar navbar-expand-lg wallpaper">
-
-				<!-- Pulsante per ritorno alla home -->
-				<router-link class="navbar-brand px-3 text-adaptive" to="/">
-					<img src="images/logo.svg" width="40" height="40" alt="">
-				</router-link>
-
-				<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<!-- Elementi della navbar-->
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto px-3 mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/json">JSON</router-link>
-						</li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/crud">CRUD</router-link>
-						</li>
-					</ul>
-				</div>
-			</nav>
-
 			<div class="container">
 				<div class="row m-4">
-
 					<!-- Titolo (Pixi) -->
 					<div class="container col-md-10">
 						<div class="article-box" id="pixi-titolo"></div>
 					</div>
-
 					<!-- Controlli per il titolo -->
 					<div class="container col-md-1">
 						<div class="row mt-4 d-flex justify-content-center">
-							<button type="button" id="titleRotation">↺</button>
+							<button type="button" id="titleRotation" aria-label="Rotate Title">↺</button>
 						</div>
-
 						<div class="row mt-2 d-flex justify-content-center">
-							<button type="button" id="titleColor">🌈</button>
+							<button type="button" id="titleColor" aria-label="Change Title Color">🌈</button>
 						</div>
-
 						<div class="row mt-2 d-flex justify-content-center">
-							<button type="button" id="titlePlus">+</button>
+							<button type="button" id="titlePlus" aria-label="Increase Title Size">+</button>
 						</div>
-
 						<div class="row mt-2 d-flex justify-content-center">
-							<button type="button" id="titleMinus">-</button>
+							<button type="button" id="titleMinus" aria-label="Decrease Title Size">-</button>
 						</div>
-
 						<div class="row mt-2 d-flex justify-content-center">
-							<button type="button" id="titleFont">♺</button>
+							<button type="button" id="titleFont" aria-label="Change Title Font">♺</button>
 						</div>
 					</div>
 				</div>
@@ -104,12 +92,10 @@
 					<component :is="Component" />
 				</transition>
 			</router-view>
-
 		</div>
-	</div>
+	</main>
 
-	<!-- Footer -->
-	<footer class="wallpaper mt-5">
+	<footer class="wallpaper mt-5" role="contentinfo">
 		<div class="container text-center text-adaptive py-3">
 			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
 		</div>
@@ -117,7 +103,7 @@
 
 	<!-- Cambio tema per bootstrap -->
 	<script>
-		const matchPrefersLight = window.matchMedia('(prefers-color-scheme:light)');
+		const matchPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
 		if (matchPrefersLight.matches) {
 			document.documentElement.setAttribute('data-bs-theme', 'light');
 		}
@@ -128,3 +114,4 @@
 </body>
 
 </html>
+
