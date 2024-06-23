@@ -4,7 +4,7 @@ const ArgomentoPage = {
         <div class="row m-4">
             <div class="container col-md-6">
                 <section class="article-box">
-                    <h1>Come Creare una Piccola Applicazione con PixiJS</h1>
+                    <h1>Esempio di applicazione</h1>
                     <p>
                         Ecco un esempio semplice per iniziare:
                     </p>
@@ -35,7 +35,7 @@ app.stage.addChild(rectangle);
 
             <div class="container col-md-6">
                 <section class="article-box">
-                    <h1>Testo Animato con PixiJS</h1>
+                    <h1>Il titolo</h1>
                     <p>
                     pixiTitolo è la funzione che crea e anima il titolo della pagina. Il testo ruota su se stesso a una velocità regolata, insieme ad altri valori, da options, oggetto passato dal chiamante.
                     </p>
@@ -58,7 +58,7 @@ requestAnimationFrame(updateSkew);
         <div class="row m-4">
             <div class="container col-md-6">
                 <section class="article-box">
-                    <h1>Come Creare una Piccola Animazione con PixiJS</h1>
+                    <h1>Esempio di animazione</h1>
                     <p>
                         PixiJS ha performance relativamente buone in quanto sfrutta la GPU per il rendering, grazie a WebGL (Implementazione in browser di OpenGL).
                     </p>
@@ -93,7 +93,7 @@ app.ticker.add(() => {
 
             <div class="container col-md-6">
                 <section class="article-box">
-                    <h1>Gestione degli Eventi dei Pulsanti</h1>
+                    <h1>Interazione con l'utente</h1>
                     <p>
                         La funzione pixiTitolo gestisce diversi eventi sui pulsanti per interagire dinamicamente con il testo animato. utilizzando addEventListener per aggiungere un ascoltatore di eventi che interagisce con variabili che influenzano lo stile del testo.
                     </p>
