@@ -95,23 +95,24 @@
 				</router-view>
 			</main>
 		</div>
+	</div>
 
-		<footer class="wallpaper mt-5" role="contentinfo">
-			<div class="container text-center text-adaptive py-3">
-				<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
-			</div>
-		</footer>
+	<footer class="wallpaper mt-5" role="contentinfo">
+		<div class="container text-center text-adaptive py-3">
+			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
+		</div>
+	</footer>
 
-		<!-- Cambio tema per bootstrap -->
-		<script>
-			const matchPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
-			if (matchPrefersLight.matches) {
-				document.documentElement.setAttribute('data-bs-theme', 'light');
-			}
-			matchPrefersLight.addEventListener('change', event => {
-				document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
-			});
-		</script>
+	<!-- Cambio tema per bootstrap -->
+	<script>
+		const matchPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
+		if (matchPrefersLight.matches) {
+			document.documentElement.setAttribute('data-bs-theme', 'light');
+		}
+		matchPrefersLight.addEventListener('change', event => {
+			document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
+		});
+	</script>
 </body>
 
 </html>
