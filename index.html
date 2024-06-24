@@ -56,7 +56,7 @@
 				</div>
 			</nav>
 
-			<main role="main" class="flex-grow-1">
+			<main class="flex-grow-1">
 
 				<div class="container">
 					<div class="row m-4">
@@ -89,15 +89,15 @@
 
 				<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
 				<router-view v-slot="{ Component }">
-					<transition name="trans" mode="out-in">
-						<component :is="Component" />
+					<transition mode="out-in">
+						<component :is="Component"></component>
 					</transition>
 				</router-view>
 			</main>
 		</div>
 	</div>
 
-	<footer class="wallpaper mt-5" role="contentinfo">
+	<footer class="wallpaper mt-5">
 		<div class="container text-center text-adaptive py-3">
 			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
 		</div>
