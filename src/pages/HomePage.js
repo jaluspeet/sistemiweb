@@ -20,9 +20,10 @@ const HomePage = {
             <div class="container col-md-12">
                 <section class="article-box">
                     <h1>Esempi di utilizzo</h1>
-                    <p>
-                        PixiJS viene utilizzato da diverse aziende importanti quali Disney, Nickelodeon, Google, Facebook, e molti altri.
-                        Alcuni esempi di utilizzo sono:
+                        <p>
+                            PixiJS viene utilizzato da diverse aziende importanti quali Disney, Nickelodeon, Google, Facebook, e molti altri.
+                            Alcuni esempi di utilizzo sono:
+                        </p>
                         <ul>
                             <li>Visualizzazione di dati in tempo reale</li>
                             <li>Creazione di giochi online</li>
@@ -32,8 +33,11 @@ const HomePage = {
                             <li>Testo che gira come quello in cima alla pagina!</li>
                         </ul>
 
+
                         <h2>Librerie compatibili con PixiJS</h2>
-                        <p>Alcune delle principali librerie compatibili con PixiJS, che estendono le sue capacità per creare esperienze interattive più complesse e ricche:</p>
+                        <p>
+                            Alcune delle principali librerie compatibili con PixiJS, che estendono le sue capacità per creare esperienze interattive più complesse e ricche:
+                        </p>
                         <ul>
                             <li>
                                 <strong>pixi-spine</strong> Integra le animazioni Spine in PixiJS. Spine è uno strumento per fare rig di modelli 2D e animazioni.
@@ -45,7 +49,6 @@ const HomePage = {
                                 <strong>pixi-particles</strong> Permette di creare e gestire sistemi di particelle per effetti come fuoco, fumo, esplosioni e altro ancora.
                             </li>
                         </ul>
-                    </p>
                 </section>
             </div>
         </div>
