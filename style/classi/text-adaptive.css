@@ -1,8 +1,8 @@
 .text-adaptive {
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    text-shadow: 2px 3px var(--text-shadow-color);
+    text-shadow: 1px 1px var(--text-shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -13,7 +13,7 @@
 .text-adaptive:hover {
     color: var(--primary-color-alt);
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 2px;
 }
 
 .text-adaptive:active {
