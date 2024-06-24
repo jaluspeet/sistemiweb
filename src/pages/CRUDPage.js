@@ -28,7 +28,7 @@ const CRUDPage = {
 		</div>
 
 		<div class="row m-4">
-			<div class="container col-md-6">
+			<div class="container col-md-6 mt-4">
 				<section class="article-box">
 					<h2 class="text-adaptive">Modifica frutto</h2>
 					<div v-if="selectedFruit !== null">
@@ -46,7 +46,7 @@ const CRUDPage = {
 				</section>
 			</div>
 
-			<div class="container col-md-6">
+			<div class="container col-md-6 mt-4">
 				<section class="article-box">
 					<h2 class="text-adaptive">Aggiungi frutto</h2>
 					<label class="text-adaptive">Nome:</label>
