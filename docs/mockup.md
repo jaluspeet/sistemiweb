@@ -21,3 +21,6 @@ I pulsanti sono stati progettati con colori accesi per catturare l'attenzione e 
 ## Blocchi di testo
 I blocchi di testo floating sono progettati per adattarsi dinamicamente alle dimensioni dello schermo. Grazie a Bootstrap, su schermi più piccoli come quelli degli smartphone, questi blocchi si dispongono in verticale per una lettura agevole. Su dispositivi più grandi, invece, si affiancano orizzontalmente, sfruttando al meglio lo spazio disponibile e migliorando la fruibilità dei contenuti.
 ![image](media/mock3.png)
+
+## Liste
+Abbiamo optato per semplificare le liste e utilizzare un semplice punto piuttosto che numerarle, in quanto il numero di elementi era piuttosto ridotto, mantenendo così il tutto più minimale. D'altra parte, abbiamo ritenuto importante evidenziare alcuni elementi nel testo utilizzando il colore d'accento del sito.
