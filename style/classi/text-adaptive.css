@@ -2,7 +2,7 @@
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 2px 3px var(--solid-color);
+    text-shadow: 2px 3px var(--text-shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -21,5 +21,5 @@
 }
 
 strong {
-    color: var(--primary-color-alt);
+    color: var(--primary-color);
 }

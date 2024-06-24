@@ -1,13 +1,13 @@
 :root {
     --primary-color: #d35bb9;
     --primary-color-alt: #ee6897;
-
     --translucent-color:  #a69dab22;
     --border-color: #dfa5ffb3;
-
     --solid-color: #eeeeee;
-    --text-color: #3c3c3c;
-    --animation-color: #6b0c5e;
+
+    --text-color: #303030;
+    --text-shadow-color: #ffe3fe;
+
     --background-image: url('../../images/background-l.svg');
 }
 
@@ -15,9 +15,11 @@
     :root {
         --translucent-color: #4c3f5222;
         --border-color: #4c3f5266;
-
         --solid-color: #191919;
+
         --text-color: #eeeeee;
+        --text-shadow-color: #000000;
+
         --background-image: url('../../images/background-d.svg');
     }
 }
