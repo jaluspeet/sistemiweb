@@ -2,7 +2,7 @@
     color: var(--text-color);
     font-size: 1.3rem;
     font-weight: bold;
-    text-shadow: 1px 1px var(--text-shadow-color);
+    text-shadow: 2px 2px var(--text-shadow-color);
     transition: transform 0.3s ease;
 }
 
