@@ -46,8 +46,8 @@ export const pixiTitolo = (app, options, container) => {
     const buttonRotation = document.getElementById("titleRotation");
     const buttonFont = document.getElementById("titleFont");
 
-    buttonPlus.addEventListener('click', () => { text.style.fontSize += 10; console.log(text.style.fontSize); });
-    buttonMinus.addEventListener('click', () => { text.style.fontSize -= 10; console.log(text.style.fontSize); });
+    buttonPlus.addEventListener('click', () => { text.style.fontSize += 10; });
+    buttonMinus.addEventListener('click', () => { text.style.fontSize -= 10; });
     buttonColor.addEventListener('click', () => text.style.fill = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0"));
     buttonRotation.addEventListener('click', () => options.rotationSpeed += 1);
     buttonFont.addEventListener('click', () => text.style.fontFamily = fonts[(fonts.indexOf(text.style.fontFamily) + 1) % fonts.length]);
