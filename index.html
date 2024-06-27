@@ -40,6 +40,7 @@
 					<img src="images/logo.svg" width="40" height="40" alt="">
 				</router-link>
 
+				<!-- Pulsante per espandere la navbar -->
 				<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Espandi/riduci navbar">
@@ -97,13 +98,14 @@
 		</div>
 	</div>
 
+	<!-- Footer -->
 	<footer class="wallpaper mt-5">
 		<div class="container text-center text-adaptive py-3">
 			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
 		</div>
 	</footer>
 
-	<!-- Cambio tema per bootstrap -->
+	<!-- Cambio tema per bootstrap (non segue nativamente @media - prefers-color-scheme) -->
 	<script>
 		const matchPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
 		if (matchPrefersLight.matches) {

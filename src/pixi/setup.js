@@ -14,7 +14,8 @@ export class pixiBase {
             ...options
         });
 
-
+        // opzioni aggiuntive non riguardanti il setup
+        // vengono concatenate (...options) e passate alla setupFunction
 
         container.appendChild(app.view);
         setupFunction(app, options, container);

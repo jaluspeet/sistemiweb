@@ -1,9 +1,9 @@
-/* colori */
+/* colori (chiaro/scuro) */
 @import url('./colori/colori.css');
 
-/* dispositivi */
-/* @import url('./dispositivi/tablet.css');
-@import url('./dispositivi/telefono.css'); */
+/* impostazioni individuali per dispositivi */
+/* @import url('./dispositivi/tablet.css'); */
+/* @import url('./dispositivi/telefono.css'); */
 
 /* classi */
 @import url('./classi/navbartoggler.css');
