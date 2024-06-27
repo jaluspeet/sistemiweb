@@ -90,7 +90,7 @@
 
 				<!-- Contenuto selezionato dinamicamente da Vue Router (vedi src/pages) -->
 				<router-view v-slot="{ Component }">
-					<transition mode="out-in">
+					<transition name="trans" mode="out-in">
 						<component :is="Component"></component>
 					</transition>
 				</router-view>
