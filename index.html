@@ -43,16 +43,20 @@
 				<!-- Pulsante per espandere la navbar -->
 				<button class="navbar-toggler shadow-none border-0 custom-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Espandi/riduci navbar">
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Espandi/riduci navbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- Elementi della navbar-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto px-3 mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/json">JSON</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/crud">CRUD</router-link></li>
 					</ul>
 				</div>
 			</nav>
@@ -63,26 +67,31 @@
 					<div class="row m-4">
 
 						<!-- Titolo (Pixi) -->
-						<div class="container col-md-10">
+						<div class="container col-md-9">
 							<div class="article-box" id="pixi-titolo"></div>
 						</div>
 
 						<!-- Controlli per il titolo -->
 						<div class="container col-md-1">
 							<div class="row mt-4 d-flex justify-content-center">
-								<button type="button" id="titleRotation" aria-label="Ruota titolo">↺</button>
+								<button type="button" id="titleRotation"
+									aria-label="Ruota titolo">↺</button>
 							</div>
 							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleColor" aria-label="Cambia colore titolo">🌈</button>
+								<button type="button" id="titleColor"
+									aria-label="Cambia colore titolo">🌈</button>
 							</div>
 							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titlePlus" aria-label="Aumenta dimensione titolo">+</button>
+								<button type="button" id="titlePlus"
+									aria-label="Aumenta dimensione titolo">+</button>
 							</div>
 							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleMinus" aria-label="Riduci dimensione titolo">-</button>
+								<button type="button" id="titleMinus"
+									aria-label="Riduci dimensione titolo">-</button>
 							</div>
 							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleFont" aria-label="Cambia font titolo">♺</button>
+								<button type="button" id="titleFont"
+									aria-label="Cambia font titolo">♺</button>
 							</div>
 						</div>
 					</div>
@@ -97,6 +106,8 @@
 			</main>
 		</div>
 	</div>
+	
+	<div id="pixi-frutta"></div>
 
 	<!-- Footer -->
 	<footer class="wallpaper mt-5">
