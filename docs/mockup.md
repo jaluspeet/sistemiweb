@@ -6,12 +6,6 @@ Abbiamo integrato animazioni slide per il cambio pagina e pulsanti che si deform
 
 ![image](media/mock5.png)
 
-## Titolo
-Il titolo della nostra pagina è animato e interattivo, realizzato con PixiJS, la libreria di cui parliamo. Questo titolo non solo attira l'attenzione, ma permette anche agli utenti di interagire con il testo, fornendo un esempio pratico di cosa può fare PixiJS. A differenza di una semplice animazione, questo dimostra chiaramente come si possono creare elementi interattivi con canvas WebGL in modo semplice e diretto, senza bisogno di esempi complessi.
-
-![image](media/mock4.png)
-
-
 # Riconoscimento automatico del tema del dispositivo
 Il nostro sito riconosce automaticamente il tema scuro o chiaro impostato sul dispositivo dell'utente, adattando il proprio aspetto di conseguenza. Questa funzionalità offre un'esperienza visiva coerente e immediata, senza necessità di un pulsante per cambiare tema. Preferiamo questa soluzione perché garantisce una maggiore comodità per l'utente, rispettando le sue preferenze di sistema e riducendo la necessità di configurazioni manuali.
 
@@ -23,6 +17,12 @@ l nostro sito è progettato per essere responsive, adattandosi automaticamente a
 ![image](media/mock6.png)
 
 # Elementi
+## Titolo
+Il titolo della nostra pagina è animato e interattivo, realizzato con PixiJS, la libreria di cui parliamo. Questo titolo non solo attira l'attenzione, ma permette anche agli utenti di interagire con il testo, fornendo un esempio pratico di cosa può fare PixiJS. A differenza di una semplice animazione, questo dimostra chiaramente come si possono creare elementi interattivi con canvas WebGL in modo semplice e diretto, senza bisogno di esempi complessi.
+
+![image](media/mock4.png)
+
+
 ## Navbar
 La navbar è stata progettata per adattarsi dinamicamente alle dimensioni dello schermo. Su dispositivi mobili, si trasforma in un menu hamburger per risparmiare spazio e migliorare la navigazione. Questo design rende l'accesso alle varie sezioni del sito semplice e immediato, anche su schermi più piccoli.
 
