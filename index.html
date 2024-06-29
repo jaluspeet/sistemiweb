@@ -28,6 +28,7 @@
 </head>
 
 <body class="d-flex flex-column vh-100 overflow-auto">
+	
 	<div class="flex-grow-1">
 
 		<!-- VUE ROOT -->
@@ -51,12 +52,9 @@
 				<!-- Elementi della navbar-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto px-3 mb-2 mb-lg-0">
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/json">JSON</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive"
-								to="/crud">CRUD</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
 					</ul>
 				</div>
 			</nav>
@@ -64,15 +62,15 @@
 			<main class="flex-grow-1">
 
 				<div class="container">
-					<div class="row m-4">
+					<div class="row p-4">
 
 						<!-- Titolo (Pixi) -->
-						<div class="container col-md-9">
+						<div class="container col-9">
 							<div class="article-box" id="pixi-titolo"></div>
 						</div>
 
 						<!-- Controlli per il titolo -->
-						<div class="container col-md-1">
+						<div class="container col-2">
 							<div class="row mt-4 d-flex justify-content-center">
 								<button type="button" id="titleRotation"
 									aria-label="Ruota titolo">↺</button>
@@ -106,8 +104,14 @@
 			</main>
 		</div>
 	</div>
-	
-	<div id="pixi-frutta"></div>
+
+	<div class="container">
+		<div class="row p-4">
+			<div class="container col-11">
+				<div class="article-box" id="pixi-frutta"></div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Footer -->
 	<footer class="wallpaper mt-5">

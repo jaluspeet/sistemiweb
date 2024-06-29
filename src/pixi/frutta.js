@@ -12,27 +12,43 @@
  * @return {void}
  */
 export const pixiFrutta = (app, options, container) => {
-    
-    const rectangle = new PIXI.Graphics();
-    rectangle.beginFill(0xFF0000);
-    rectangle.drawRect(0, 0, options.width || 100, options.height || 100);
-    rectangle.endFill();
+    const fruitsContainer = new PIXI.Container();
+    app.stage.addChild(fruitsContainer);
 
-    rectangle.x = (app.screen.width - rectangle.width) / 2;
-    rectangle.y = (app.screen.height - rectangle.height) / 2;
+    options.frutta.forEach(fruit => {
+        const emoji = new PIXI.Text(getEmojiForFruit(fruit.name), { fontSize: fruit.gusto + 20 });
+        emoji.x = Math.random() +  app.screen.width / 2;
+        emoji.y = Math.random() + app.screen.height / 2;
+        emoji.anchor.set(0.5);
+        emoji.rotation = fruit.freschezza * (Math.PI / 180);
 
+        fruitsContainer.addChild(emoji);
+    });
 
-    app.stage.addChild(rectangle);
-
-    // ridimensionamento del canvas e del testo in base al container
+    // ridimensionamento del canvas in base al container
     function resize() {
         app.renderer.resize(container.clientWidth, options.height || 300);
-        rectangle.x = app.screen.width / 2;
-        rectangle.y = app.screen.height / 2;
     }
 
     window.addEventListener('resize', resize);
     resize();
 
+    function getEmojiForFruit(fruitName) {
+        switch (fruitName) {
+            case "banana": return "🍌";
+            case "mela": return "🍎";
+            case "ananas": return "🍍";
+            case "pesca": return "🍑";
+            case "pera": return "🍐";
+            case "kiwi": return "🥝";
+            case "albicocca": return "🍑";
+            case "fragola": return "🍓";
+            case "arancia": return "🍊";
+            case "ciliegia": return "🍒";
+            case "uva": return "🍇";
+            case "melone": return "🍈";
+            default: return "🍉";
+        }
+    }
 };
 

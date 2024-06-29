@@ -1,19 +1,23 @@
 const CRUDPage = {
   template: `
   <div class="container">
-    <div class="row m-4">
-      <div class="container table-responsive col-md-7 article-box">
-        <table class="table table-striped table-hover">
+    <div class="row p-4">
+      
+      <div class="container table-responsive col-7 article-box p-4">
+        <table class="table table-hover">
+      
           <thead>
             <tr>
+              <th scope="col"><input type="checkbox" @click="selectAllFruits"/></th>
               <th scope="col" @click="sortBy('name')">Nome <span v-if="sortColumn === 'name'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
               <th scope="col" @click="sortBy('gusto')">Gusto <span v-if="sortColumn === 'gusto'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
               <th scope="col" @click="sortBy('freschezza')">Freschezza <span v-if="sortColumn === 'freschezza'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-              <th scope="col">Azioni</th>
             </tr>
           </thead>
+          
           <tbody>
             <tr v-for="(fruit, index) in sortedFruits" :key="index">
+              <td><input type="checkbox" :value="fruit" v-model="selectedFruits" /></td>
               <td @click="editField(index, 'name')">
                 <span v-if="!isEditing(index, 'name')">{{ fruit.name }}</span>
                 <input v-else v-model="fruit.name" @blur="stopEditing" />
@@ -26,46 +30,35 @@ const CRUDPage = {
                 <span v-if="!isEditing(index, 'freschezza')">{{ fruit.freschezza }}</span>
                 <input v-else type="number" v-model="fruit.freschezza" @blur="stopEditing" />
               </td>
-              <td>
-                <button @click="deleteFruit(index)" class="button-crud btn btn-danger">ELIMINA</button>
-              </td>
             </tr>
           </tbody>
+        
         </table>
       </div>
 
-      <div class="container col-md-4 mt-4">
+      <div class="container col-4 p-4">
         <section class="article-box">
-          <h2 class="text-adaptive">Aggiungi frutto</h2>
+          <h2 class="text-adaptive">Aggiungi / Elimina</h2>
           <label class="text-adaptive">Nome:</label>
           <input v-model="newFruit.name" class="form-control"/>
           <label class="text-adaptive">Gusto:</label>
           <input v-model="newFruit.gusto" type="number" class="form-control"/>
           <label class="text-adaptive">Freschezza:</label>
           <input v-model="newFruit.freschezza" type="number" class="form-control"/>
-          <button @click="addFruit" class="button-crud mt-4">AGGIUNGI</button>
+          <div class="button-group mt-4">
+            <button @click="addFruit" class="button-crud p-2">AGGIUNGI</button>
+            <button @click="deleteSelectedFruits" class="button-crud p-2">ELIMINA</button>
+          </div>
         </section>
       </div>
+    
     </div>
   </div>
   `,
   data() {
     return {
-      fruits: [
-        { name: 'banana', gusto: 70, freschezza: 30 },
-        { name: 'mela', gusto: 60, freschezza: 80 },
-        { name: 'ananas', gusto: 65, freschezza: 70 },
-        { name: 'pesca', gusto: 80, freschezza: 50 },
-        { name: 'pera', gusto: 45, freschezza: 45 },
-        { name: 'kiwi', gusto: 70, freschezza: 50 },
-        { name: 'albicocca', gusto: 55, freschezza: 60 },
-        { name: 'prugna', gusto: 65, freschezza: 60 },
-        { name: 'fragola', gusto: 80, freschezza: 55 },
-        { name: 'pompelmo', gusto: 50, freschezza: 65 },
-        { name: 'arancia', gusto: 70, freschezza: 80 },
-        { name: 'mandarino', gusto: 60, freschezza: 80 },
-      ],
-      selectedFruit: null,
+      fruits: [],
+      selectedFruits: [],
       newFruit: {
         name: '',
         gusto: '',
@@ -122,9 +115,24 @@ const CRUDPage = {
         this.newFruit.freschezza = '';
       }
     },
-    deleteFruit(index) {
-      this.fruits.splice(index, 1);
+    deleteSelectedFruits() {
+      this.fruits = this.fruits.filter(fruit => !this.selectedFruits.includes(fruit));
+      this.selectedFruits = [];
+    },
+    selectAllFruits(event) {
+      if (event.target.checked) {
+        this.selectedFruits = this.fruits.slice();
+      } else {
+        this.selectedFruits = [];
+      }
     }
+  },
+  created() {
+    fetch('/data/frutta.json')
+      .then(response => response.json())
+      .then(data => {
+        this.fruits = data;
+      });
   }
 };
 

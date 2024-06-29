@@ -7,7 +7,7 @@ export class pixiBase {
         const container = document.getElementById(containerId);
 
         const app = new PIXI.Application({
-            antialias: true,
+            antialias: false,
             resolution: devicePixelRatio,
             autoResize: true,
             transparent: true,

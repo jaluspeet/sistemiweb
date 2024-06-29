@@ -1,8 +1,8 @@
 const ArgomentoPage = {
     template: `
     <div class="container">
-        <div class="row m-4">
-            <div class="container col-md-5">
+        <div class="row p-4">
+            <div class="container col-5">
                 <section class="article-box">
                     <h1>Esempio di applicazione</h1>
                     <p>
@@ -33,7 +33,7 @@ app.stage.addChild(rectangle);
                 </section>
             </div>
 
-            <div class="container col-md-5">
+            <div class="container col-6">
                 <section class="article-box">
                     <h1>Il titolo</h1>
                     <p>
@@ -55,8 +55,8 @@ requestAnimationFrame(updateSkew);
             </div>
         </div>
 
-        <div class="row m-4">
-            <div class="container col-md-5">
+        <div class="row p-4">
+            <div class="container col-6">
                 <section class="article-box">
                     <h1>Esempio di animazione</h1>
                     <p>
@@ -91,7 +91,7 @@ app.ticker.add(() => {
                 </section>
             </div>
 
-            <div class="container col-md-5">
+            <div class="container col-5">
                 <section class="article-box">
                     <h1>Interazione con l'utente</h1>
                     <p>

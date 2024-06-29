@@ -9,7 +9,10 @@ import { pixiBase } from './pixi/setup.js';
 import { pixiTitolo } from './pixi/titolo.js';
 import { pixiFrutta } from './pixi/frutta.js';
 
-window.onload = function () {
+window.onload = async function () {
+
+    const response = await fetch('/data/frutta.json');
+    const fruttaJSON = await response.json();
 
     const routes = [
         { path: '/', component: HomePage },
@@ -36,7 +39,9 @@ window.onload = function () {
 
             // istanza (titolo)
             pixiInstance_main.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 0, height: 300 });
-            pixiInstance_main.newCanvas('pixi-frutta', pixiFrutta, { height: 600 });
+
+            // istanza (frutta)
+            pixiInstance_main.newCanvas('pixi-frutta', pixiFrutta, { frutta: fruttaJSON, height: 600});
 
             // si aggiungono altre istanze nello stesso modo. 
         },

@@ -1,8 +1,8 @@
 :root {
     --primary-color: #d35bb9;
     --primary-color-alt: #ee6897;
-    --translucent-color:  #a69dab22;
-    --border-color: #dfa5ffb3;
+    --box-color:  #a69dab66;
+    --border-color: #dfa5ff66;
     --solid-color: #eeeeee;
 
     --text-color: #5a4263;
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --translucent-color: #4c3f5222;
+        --box-color: #4c3f5266;
         --border-color: #4c3f5266;
         --solid-color: #191919;
 

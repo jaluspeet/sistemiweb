@@ -1,0 +1,15 @@
+[
+  { "name": "banana", "gusto": 70, "freschezza": 30 },
+  { "name": "mela", "gusto": 60, "freschezza": 80 },
+  { "name": "ananas", "gusto": 65, "freschezza": 70 },
+  { "name": "pesca", "gusto": 80, "freschezza": 50 },
+  { "name": "pera", "gusto": 45, "freschezza": 45 },
+  { "name": "kiwi", "gusto": 70, "freschezza": 50 },
+  { "name": "albicocca", "gusto": 55, "freschezza": 60 },
+  { "name": "prugna", "gusto": 65, "freschezza": 60 },
+  { "name": "fragola", "gusto": 80, "freschezza": 55 },
+  { "name": "pompelmo", "gusto": 50, "freschezza": 65 },
+  { "name": "arancia", "gusto": 70, "freschezza": 80 },
+  { "name": "mandarino", "gusto": 60, "freschezza": 80 }
+]
+
