@@ -55,10 +55,7 @@ const HomePage = {
     </div>
   `,
   mounted() {
-    const pixiFruttaDiv = document.getElementById('pixi-frutta');
-    if (pixiFruttaDiv) {
-      pixiFruttaDiv.style.display = 'none';
-    }
+    document.getElementById('pixi-frutta').style.display = 'none';
   }
 };
 
