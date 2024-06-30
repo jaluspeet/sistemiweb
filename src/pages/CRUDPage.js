@@ -3,7 +3,7 @@ const CRUDPage = {
   <div class="container">
     <div class="row p-4">
       
-      <div class="container table-responsive col-7 article-box p-4">
+      <div class="container table-responsive col-lg-7 article-box p-4">
         <table class="table table-hover">
       
           <thead>
@@ -36,7 +36,7 @@ const CRUDPage = {
         </table>
       </div>
 
-      <div class="container col-4 p-4">
+      <div class="container col-lg-4 p-4">
         <section class="article-box">
           <h2 class="text-adaptive">Aggiungi / Elimina</h2>
           <label class="text-adaptive">Nome:</label>
