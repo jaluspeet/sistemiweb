@@ -11,39 +11,47 @@ import { pixiFrutta } from './pixi/frutta.js';
 
 window.onload = async function () {
 
+    // frutta.json viene caricato qui e passato come props a CRUDPage.
+    // Si potrebbe fare lo stesso per alieni.json in JSONPage, ma abbiamo preferito mostrare entrambi i metodi.
     const response = await fetch('/data/frutta.json');
     const fruttaJSON = await response.json();
 
+    // Qui viene creato uno stato reattivo con Vue per passare a CRUDPage e frutta.js
+    // lo stesso array e poterlo aggiornare in entrambi i componenti.
+    const state = Vue.reactive({
+        fruits: fruttaJSON,
+    });
+
+    // Definizione delle pagine di Vue Router
     const routes = [
         { path: '/', component: HomePage },
         { path: '/argomento', component: ArgomentoPage },
         { path: '/json', component: JSONPage },
-        { path: '/crud', component: CRUDPage }
+        { path: '/crud', component: CRUDPage, props: { state } } // Passiamo lo stato reattivo a CRUDPage come props
     ];
 
+    // Creazione dell'istanza di Vue Router
     const router = VueRouter.createRouter({
         history: VueRouter.createWebHashHistory(),
         routes
     });
 
-
+    // Creazioen dell'applicazione Vue
     const app = Vue.createApp({
         mounted() {
-
-            // Astrazione per creare istanze di Pixi (per migliore compatibilita con Vue). 
-            // Il codice delle istanze e del costruttore si trova in ./pixi/
-
-            // Costruttore per Pixi.js: animazioni sotto la stessa istanza condividono le stesse impostazioni e clock,
-            // Se non risulta necessario separarle, si può usare una sola istanza per tutte le animazioni per migliorare le performance.
+            
+            // Costruttore di pixiBase, classe che gestisce un istanza di PIXI.Application
             const pixiInstance_main = new pixiBase();
 
-            // istanza (titolo)
-            pixiInstance_main.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 0, height: 300 });
-
-            // istanza (frutta)
-            pixiInstance_main.newCanvas('pixi-frutta', pixiFrutta, { frutta: fruttaJSON, height: 600});
-
-            // si aggiungono altre istanze nello stesso modo. 
+            // Creazione di due canvas PIXI con due funzioni diverse
+            // NOTE: Questi due canvas si trovano sotto la stessa istanza di PIXI.Application in quanto non necessitano di timer separati.
+            // Se avessero avuto bisogno di timer separati, avremmo dovuto creare due istanze di PIXI.Application.
+            
+            // newCanvas è un astrazione scritta per semplificare la creazione di nuovi canvas PIXI, non dovendo ripetere il boilerplate iniziale.
+            // Permette di passare un oggetto options che contiene al suo interno sia le opzioni per la funzione che crea il canvas, sia le opzioni per la funzione che gestisce il canvas. (es. width, height o textString, rotationSpeed)
+            // per l'implementazione vedere setup.js
+            pixiInstance_main.newCanvas('pixi-titolo', pixiTitolo, { textString: 'Pixi.js!!!', rotationSpeed: 0, height: 350 });
+            pixiInstance_main.newCanvas('pixi-frutta', pixiFrutta, { state, height: 300 });
         },
     });
 

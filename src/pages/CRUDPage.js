@@ -1,9 +1,12 @@
 const CRUDPage = {
+  
+  props: ['state'],
+
   template: `
   <div class="container">
     <div class="row p-4">
       
-      <div class="container table-responsive col-lg-7 article-box p-4">
+      <div class="container table-responsive col-lg-6 article-box p-4">
         <table class="table table-hover">
       
           <thead>
@@ -36,8 +39,8 @@ const CRUDPage = {
         </table>
       </div>
 
-      <div class="container col-lg-4 p-4">
-        <section class="article-box">
+      <div class="container col-lg-6 p-4">
+        <section class="article-box p-4">
           <h2 class="text-adaptive">Aggiungi / Elimina</h2>
           <label class="text-adaptive">Nome:</label>
           <input v-model="newFruit.name" class="form-control"/>
@@ -45,6 +48,7 @@ const CRUDPage = {
           <input v-model="newFruit.gusto" type="number" class="form-control"/>
           <label class="text-adaptive">Freschezza:</label>
           <input v-model="newFruit.freschezza" type="number" class="form-control"/>
+
           <div class="button-group mt-4">
             <button @click="addFruit" class="button-crud p-2">AGGIUNGI</button>
             <button @click="deleteSelectedFruits" class="button-crud p-2">ELIMINA</button>
@@ -55,9 +59,9 @@ const CRUDPage = {
     </div>
   </div>
   `,
+
   data() {
     return {
-      fruits: [],
       selectedFruits: [],
       newFruit: {
         name: '',
@@ -70,9 +74,10 @@ const CRUDPage = {
       sortDirection: 'asc'
     };
   },
+
   computed: {
     sortedFruits() {
-      return this.fruits.slice().sort((a, b) => {
+      return this.state.fruits.slice().sort((a, b) => {
         let modifier = this.sortDirection === 'asc' ? 1 : -1;
         if (this.sortColumn === 'name') {
           return (a.name > b.name ? 1 : -1) * modifier;
@@ -83,6 +88,7 @@ const CRUDPage = {
       });
     }
   },
+
   methods: {
     editField(index, field) {
       this.editingIndex = index;
@@ -91,10 +97,12 @@ const CRUDPage = {
     isEditing(index, field) {
       return this.editingIndex === index && this.editingField === field;
     },
+
     stopEditing() {
       this.editingIndex = null;
       this.editingField = null;
     },
+
     sortBy(column) {
       if (this.sortColumn === column) {
         this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
@@ -103,9 +111,10 @@ const CRUDPage = {
         this.sortDirection = 'asc';
       }
     },
+
     addFruit() {
       if (this.newFruit.name && this.newFruit.gusto && this.newFruit.freschezza) {
-        this.fruits.push({
+        this.state.fruits.push({
           name: this.newFruit.name,
           gusto: this.newFruit.gusto,
           freschezza: this.newFruit.freschezza
@@ -115,24 +124,20 @@ const CRUDPage = {
         this.newFruit.freschezza = '';
       }
     },
+
     deleteSelectedFruits() {
-      this.fruits = this.fruits.filter(fruit => !this.selectedFruits.includes(fruit));
+      this.state.fruits = this.state.fruits.filter(fruit => !this.selectedFruits.includes(fruit));
       this.selectedFruits = [];
     },
+
     selectAllFruits(event) {
       if (event.target.checked) {
-        this.selectedFruits = this.fruits.slice();
+        this.selectedFruits = this.state.fruits.slice();
       } else {
         this.selectedFruits = [];
       }
     }
-  },
-  created() {
-    fetch('/data/frutta.json')
-      .then(response => response.json())
-      .then(data => {
-        this.fruits = data;
-      });
+
   }
 };
 

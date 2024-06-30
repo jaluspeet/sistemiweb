@@ -6,11 +6,13 @@ export class pixiBase {
     newCanvas(containerId, setupFunction, options = {}) {
         const container = document.getElementById(containerId);
 
+        // opzioni del canvas, quelle che non hanno un valore options oltre a 
+        // quello di default sono hardcoded perché non si ha necessità di cambiarle
         const app = new PIXI.Application({
-            antialias: false,
+            antialias: options.antialias || false,
             resolution: devicePixelRatio,
             autoResize: true,
-            transparent: true,
+            transparent: options.transparent || true,
             ...options
         });
 

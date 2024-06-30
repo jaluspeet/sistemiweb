@@ -4,6 +4,7 @@
  * Crea del testo fico e lo aggiunge al canvas per essere usato come titolo.
  * @param {PIXI.Application} app - L'istanza di PIXI.Application.
  * @param {Object} options - Oggetto contenente le opzioni
+ * @param {Object} container - Il container HTML in cui inserire il canvas PIXI
  *
  * Per questa funzione le opzioni esposte sono:
  * @param {string} options.textString - Il testo da visualizzare.
@@ -66,13 +67,16 @@ export const pixiTitolo = (app, options, container) => {
     // animazione
     let time = 0;
 
+    // Normalmente si utilizzerebbe app.ticker.add() per aggiornare la scena, ma in questo caso
+    // si avrebbero delle interferenze con gli eventi di listen dei pulsanti (doppio click, ecc.)
+    // Una soluzione alternativa è quella di fare debounce degli eventi
     const updateSkew = () => {
         time += 0.01;
         time %= 2 * Math.PI;
 
-        /* modulo del seno/coseno del frame per impostare la rotazione, evitando di fare operazioni
-        trigonometriche su numeri crescenti all'infinito, che potrebbe risultare costoso computazionalmente.
-        un approccio alternativo (peggiore) poteva essere di limitare il framerate */
+        /* modulo del seno/coseno del frame per ottimizzare la rotazione, evitando di fare operazioni
+        trigonometriche su numeri crescenti all'infinito. Un ulteriore ottimizzazione potrebbe essere limitare il framerate,
+        ma diventa complicato se non si utilizza app.ticker */
         text.skew.x = Math.sin(time) * options.rotationSpeed;
         text.skew.y = Math.cos(time) * options.rotationSpeed;
 
