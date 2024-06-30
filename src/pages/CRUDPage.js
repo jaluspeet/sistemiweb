@@ -3,9 +3,9 @@ const CRUDPage = {
 
   template: `
     <div class="container">
-      <div class="row ">
-        <div class="container table-responsive col-lg-6 article-box p-4">
-          <table class="table table-hover">
+      <div class="row">
+        <div class="container col-lg-6 article-box p-4">
+          <table class="table table-responsive table-hover">
             <thead>
               <tr>
                 <th scope="col"><input type="checkbox" @click="selectAllFruits"/></th>
@@ -49,7 +49,6 @@ const CRUDPage = {
             <div class="button-group mt-4">
               <button @click="addFruit" class="button-crud p-2">AGGIUNGI</button>
               <button @click="deleteSelectedFruits" class="button-crud p-2">ELIMINA</button>
-              <!-- New button for PixiJS visibility -->
               <button @click="togglePixiFrutta" class="button-crud p-2 mt-2">NINJA</button>
             </div>
           </section>

@@ -2,8 +2,8 @@ const JSONPage = {
   template: `
   <div class="container">
     <div class="row">
-      <div class="container table-responsive col-lg-12 article-box p-4">
-        <table class="table table-hover">
+      <div class="container col-lg-12 article-box p-4">
+        <table class="table table-responsive table-hover">
           <thead>
             <tr>
               <th scope="col" @click="sortBy('nome')">Nome <span v-if="sortColumn === 'nome'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>

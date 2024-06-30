@@ -28,7 +28,7 @@
 </head>
 
 <body class="d-flex flex-column vh-100 overflow-auto">
-	
+
 	<div class="flex-grow-1">
 
 		<!-- VUE ROOT -->
@@ -53,9 +53,12 @@
 				<!-- Elementi della navbar-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto px-3">
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/argomento">Argomento</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/json">JSON</router-link></li>
-						<li class="nav-item"><router-link class="nav-link text-adaptive" to="/crud">CRUD</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/argomento">Argomento</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/json">JSON</router-link></li>
+						<li class="nav-item"><router-link class="nav-link text-adaptive"
+								to="/crud">CRUD</router-link></li>
 					</ul>
 				</div>
 			</nav>
@@ -66,32 +69,28 @@
 					<div class="row">
 
 						<!-- Pixi: Titolo -->
-						<div class="container col-lg-9">
+						<div class="container col-9">
 							<div class="article-box" id="pixi-titolo"></div>
 						</div>
 
-
 						<!-- Controlli per il titolo -->
-						<div class="container col-lg-2">
-							<div class="row mt-4 d-flex justify-content-center">
-								<button type="button" id="titleRotation"
-									aria-label="Ruota titolo">↺</button>
-							</div>
-							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleColor"
-									aria-label="Cambia colore titolo">🌈</button>
-							</div>
-							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titlePlus"
-									aria-label="Aumenta dimensione titolo">+</button>
-							</div>
-							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleMinus"
-									aria-label="Riduci dimensione titolo">-</button>
-							</div>
-							<div class="row mt-2 d-flex justify-content-center">
-								<button type="button" id="titleFont"
-									aria-label="Cambia font titolo">♺</button>
+						<div class="container col-2 d-flex flex-column align-items-center">
+							<div class="button-group mt-4">
+								<div class="row mt-4">
+									<button type="button" id="titleRotation" aria-label="Ruota titolo">↺</button>
+								</div>
+								<div class="row mt-2">
+									<button type="button" id="titleColor" aria-label="Cambia colore titolo">🌈</button>
+								</div>
+								<div class="row mt-2">
+									<button type="button" id="titlePlus" aria-label="Aumenta dimensione titolo">+</button>
+								</div>
+								<div class="row mt-2">
+									<button type="button" id="titleMinus" aria-label="Riduci dimensione titolo">-</button>
+								</div>
+								<div class="row mt-2">
+									<button type="button" id="titleFont" aria-label="Cambia font titolo">♺</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -108,7 +107,7 @@
 	</div>
 
 	<!-- Pixi: Fruit ninja, per pagina CRUD -->
-	<div  class="container">
+	<div class="container">
 		<div class="row">
 			<div class="container col-lg-12">
 				<div class="article-box" id="pixi-frutta"></div>
@@ -118,7 +117,7 @@
 
 	<!-- Footer -->
 	<footer class="wallpaper mt-4 text-center py-3">
-			<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
+		<p>A.A. 2023/2024 - Spitaleri Jacopo, Bagga Naman</p>
 	</footer>
 
 	<!-- Cambio tema per bootstrap (non segue nativamente @media - prefers-color-scheme), questo script aggiorna manualmente data-bs-theme -->
