@@ -1,6 +1,6 @@
 .trans-enter-from {
   opacity: 0;
-  transform: translate(-100%, 0);
+  transform: translate(-80%, 0);
 }
 
 .trans-enter-active {
@@ -9,7 +9,7 @@
 
 .trans-leave-to {
   opacity: 0 ;
-  transform: translate(100%, 0);
+  transform: translate(80%, 0);
 }
 
 .trans-leave-active {

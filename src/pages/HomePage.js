@@ -1,7 +1,7 @@
 const HomePage = {
-    template: `
+  template: `
     <div class="container">
-        <div class="row p-4">
+        <div class="row">
             <div class="container col-lg-12">
                 <section class="article-box p-4">
                     <h1>Cos'è PixiJS?</h1>
@@ -16,7 +16,7 @@ const HomePage = {
             </div>
         </div>
 
-        <div class="row p-4">
+        <div class="row">
             <div class="container col-lg-12">
                 <section class="article-box p-4">
                     <h1>Esempi di utilizzo</h1>
@@ -53,7 +53,14 @@ const HomePage = {
             </div>
         </div>
     </div>
-    `
+  `,
+  mounted() {
+    const pixiFruttaDiv = document.getElementById('pixi-frutta');
+    if (pixiFruttaDiv) {
+      pixiFruttaDiv.style.display = 'none';
+    }
+  }
 };
 
 export default HomePage;
+

@@ -1,9 +1,9 @@
 const ArgomentoPage = {
     template: `
     <div class="container">
-        <div class="row p-4">
-            <div class="container col-lg-5">
-                <section class="article-box p-4 p-4">
+        <div class="row">
+            <div class="container col-lg-6">
+                <section class="article-box p-4">
                     <h1>Esempio di applicazione</h1>
                     <p>
                         Ecco un esempio semplice per iniziare:
@@ -55,7 +55,7 @@ requestAnimationFrame(updateSkew);
             </div>
         </div>
 
-        <div class="row p-4">
+        <div class="row">
             <div class="container col-lg-6">
                 <section class="article-box p-4">
                     <h1>Esempio di animazione</h1>
@@ -91,7 +91,7 @@ app.ticker.add(() => {
                 </section>
             </div>
 
-            <div class="container col-lg-5">
+            <div class="container col-lg-6">
                 <section class="article-box p-4">
                     <h1>Interazione con l'utente</h1>
                     <p>
