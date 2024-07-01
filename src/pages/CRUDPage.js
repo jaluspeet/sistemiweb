@@ -4,36 +4,37 @@ const CRUDPage = {
   template: `
     <div class="container">
       <div class="row">
-        <div class="container col-lg-6 article-box p-4">
-          <table class="table table-responsive table-hover">
-            <thead>
-              <tr>
-                <th scope="col"><input type="checkbox" @click="selectAllFruits"/></th>
-                <th scope="col" @click="sortBy('name')">Nome <span v-if="sortColumn === 'name'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-                <th scope="col" @click="sortBy('gusto')">Gusto <span v-if="sortColumn === 'gusto'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-                <th scope="col" @click="sortBy('freschezza')">Freschezza <span v-if="sortColumn === 'freschezza'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-              </tr>
-            </thead>
-            
-            <tbody>
-              <tr v-for="(fruit, index) in sortedFruits" :key="index">
-                <td><input type="checkbox" :value="fruit" v-model="selectedFruits" /></td>
-                <td @click="editField(index, 'name')">
-                  <span v-if="!isEditing(index, 'name')">{{ fruit.name }}</span>
-                  <input v-else v-model="fruit.name" @blur="stopEditing" />
-                </td>
-                <td @click="editField(index, 'gusto')">
-                  <span v-if="!isEditing(index, 'gusto')">{{ fruit.gusto }}</span>
-                  <input v-else type="number" v-model="fruit.gusto" @blur="stopEditing" />
-                </td>
-                <td @click="editField(index, 'freschezza')">
-                  <span v-if="!isEditing(index, 'freschezza')">{{ fruit.freschezza }}</span>
-                  <input v-else type="number" v-model="fruit.freschezza" @blur="stopEditing" />
-                </td>
-              </tr>
-            </tbody>
-          
-          </table>
+        <div class="container col-lg-6 p-4">
+          <div class="article-box p-4">
+            <table class="table table-responsive table-hover">
+              <thead>
+                <tr>
+                  <th scope="col"><input type="checkbox" @click="selectAllFruits"/></th>
+                  <th scope="col" @click="sortBy('name')">Nome <span v-if="sortColumn === 'name'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+                  <th scope="col" @click="sortBy('gusto')">Gusto <span v-if="sortColumn === 'gusto'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+                  <th scope="col" @click="sortBy('freschezza')">Freschezza <span v-if="sortColumn === 'freschezza'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr v-for="(fruit, index) in sortedFruits" :key="index">
+                  <td><input type="checkbox" :value="fruit" v-model="selectedFruits" /></td>
+                  <td @click="editField(index, 'name')">
+                    <span v-if="!isEditing(index, 'name')">{{ fruit.name }}</span>
+                    <input v-else v-model="fruit.name" @blur="stopEditing" />
+                  </td>
+                  <td @click="editField(index, 'gusto')">
+                    <span v-if="!isEditing(index, 'gusto')">{{ fruit.gusto }}</span>
+                    <input v-else type="number" v-model="fruit.gusto" @blur="stopEditing" />
+                  </td>
+                  <td @click="editField(index, 'freschezza')">
+                    <span v-if="!isEditing(index, 'freschezza')">{{ fruit.freschezza }}</span>
+                    <input v-else type="number" v-model="fruit.freschezza" @blur="stopEditing" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div class="container col-lg-6 p-4">

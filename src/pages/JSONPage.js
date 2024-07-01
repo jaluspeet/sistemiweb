@@ -2,25 +2,26 @@ const JSONPage = {
   template: `
   <div class="container">
     <div class="row">
-      <div class="container col-lg-12 article-box p-4">
-        <table class="table table-responsive table-hover">
-          <thead>
-            <tr>
-              <th scope="col" @click="sortBy('nome')">Nome <span v-if="sortColumn === 'nome'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-              <th scope="col" @click="sortBy('specie')">Specie <span v-if="sortColumn === 'specie'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-              <th scope="col" @click="sortBy('pianeta')">Pianeta <span v-if="sortColumn === 'pianeta'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
-              <th scope="col">Descrizione</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="alieno in sortedAlieni" :key="alieno.nome">
-              <td>{{ alieno.nome }}</td>
-              <td>{{ alieno.specie }}</td>
-              <td>{{ alieno.pianeta }}</td>
-              <td>{{ alieno.descrizione }}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="container col-lg-12 p-4">
+        <div class="article-box p-4">
+          <table class="table table-responsive table-hover">
+            <thead>
+              <tr>
+                <th scope="col" @click="sortBy('nome')">Nome <span v-if="sortColumn === 'nome'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+                <th scope="col" @click="sortBy('specie')">Specie <span v-if="sortColumn === 'specie'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+                <th scope="col" @click="sortBy('pianeta')">Pianeta <span v-if="sortColumn === 'pianeta'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr v-for="alieno in sortedAlieni" :key="alieno.nome">
+                <td>{{ alieno.nome }}</td>
+                <td>{{ alieno.specie }}</td>
+                <td>{{ alieno.pianeta }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
