@@ -4,7 +4,7 @@
  * Aggiunge frutta fluttuante sulla base degli elementi della tabella in CRUD
  * @param {PIXI.Application} app - L'istanza di PIXI.Application
  * @param {Object} options - Oggetto con le opzioni per la funzione
- * @param {Object} options.state - compnente reattivo di Vue contenente la lista di frutta
+ * @param {Object} options.state - componente reattivo di Vue contenente la lista di frutta
  *
  * Per questa funzione le opzioni esposte sono:
  * @param {number} options.height - L'altezza del canvas PIXI.
@@ -41,31 +41,44 @@ export const pixiFrutta = (app, options, container) => {
 
             // Se esiste già uno sprite per questo frutto, lo riutilizza
             if (existingSprites.has(fruit.name)) {
+
+                // Riutilizza lo sprite esistente
                 const existingSprite = existingSprites.get(fruit.name);
                 emoji = existingSprite.sprite;
                 emoji.x = existingSprite.x;
                 emoji.y = existingSprite.y;
                 emoji.vx = existingSprite.vx;
                 emoji.vy = existingSprite.vy;
+
+                // Aggiorna le proprietà dello sprite
+                emoji.text = getEmojiForFruit(fruit.name);
+                emoji.style.fontSize = fruit.gusto + 20;
+                emoji.vx = fruit.freschezza / 10;
+                emoji.vy = fruit.freschezza / 10;
+
             } else {
+
+                // Crea un nuovo sprite
                 emoji = new PIXI.Text(getEmojiForFruit(fruit.name), { fontSize: fruit.gusto + 20 });
                 emoji.x = Math.random() * app.screen.width;
                 emoji.y = Math.random() * app.screen.height;
-                emoji.vx = Math.random() * 2 - 1;
-                emoji.vy = Math.random() * 2 - 1;
+                emoji.vx = fruit.freschezza / 10;
+                emoji.vy = fruit.freschezza / 10;
+                emoji.rotation = Math.random() * 2 * Math.PI;
             }
 
             // Aggiunge l'emoji al container
             emoji.fruitName = fruit.name;
             emoji.anchor.set(0.5);
-            emoji.rotation = fruit.freschezza * (Math.PI / 180);
 
+            // Aggiunge un evento per rimuovere il frutto quando viene cliccato
             emoji.interactive = true;
             emoji.buttonMode = true;
             emoji.on('pointerdown', () => {
                 removeFruit(fruit, emoji);
             });
 
+            // Aggiunge lo sprite alla lista
             fruitsContainer.addChild(emoji);
             fruitSprites.push(emoji);
         });
@@ -73,11 +86,16 @@ export const pixiFrutta = (app, options, container) => {
 
     // Rimuove un frutto dalla scena e dalla lista
     const removeFruit = (fruitToRemove, spriteToRemove) => {
+        
+        // Rimuove il frutto dalla lista
         const index = options.state.fruits.findIndex(fruit => fruit === fruitToRemove);
+        
+        // Rimuove lo sprite dalla scena
         if (index !== -1) {
             options.state.fruits.splice(index, 1);
             
-            const explosion = new PIXI.Text("🥷🔪💥", { fontSize: 100 });
+            // Effetto di esplosione
+            const explosion = new PIXI.Text("💥", { fontSize: 100 });
             explosion.anchor.set(0.5);
             explosion.position.set(spriteToRemove.x, spriteToRemove.y);
             fruitsContainer.addChild(explosion);
@@ -97,13 +115,15 @@ export const pixiFrutta = (app, options, container) => {
         addFruits(newFruits);
     }, { deep: true });
 
-
     // Animazione: sposta i frutti e fa rimbalzare quelli che toccano i bordi
     app.ticker.add(() => {
+
+        // Sposta i frutti
         fruitSprites.forEach(sprite => {
             sprite.x += sprite.vx;
             sprite.y += sprite.vy;
 
+            // Rimbalza i frutti che toccano i bordi
             if (sprite.x < 0 || sprite.x > app.screen.width) {
                 sprite.vx *= -1;
             }
