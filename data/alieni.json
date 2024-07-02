@@ -2,52 +2,51 @@
   {
     "nome": "Four Arms",
     "specie": "Tetramand",
-    "pianeta": "Khronos",
+    "pianeta": "Khronos"
   },
   {
     "nome": "Heatblast",
     "specie": "Pyronite",
-    "pianeta": "Pyros",
+    "pianeta": "Pyros"
   },
   {
     "nome": "XLR8",
     "specie": "Kineceleran",
-    "pianeta": "Kinetix",
+    "pianeta": "Kinetix"
   },
   {
     "nome": "Diamondhead",
     "specie": "Petrosapien",
-    "pianeta": "Petropia",
+    "pianeta": "Petropia"
   },
   {
     "nome": "Grey Matter",
     "specie": "Galvan",
-    "pianeta": "Galvan Prime",
+    "pianeta": "Galvan Prime"
   },
   {
     "nome": "Ripjaws",
     "specie": "Piscciss Volann",
-    "pianeta": "Piscciss",
+    "pianeta": "Piscciss"
   },
   {
     "nome": "Stinkfly",
     "specie": "Lepidopterran",
-    "pianeta": "Lepidopterra",
+    "pianeta": "Lepidopterra"
   },
   {
     "nome": "Upgrade",
     "specie": "Galvanic Mechamorph",
-    "pianeta": "Galvan B",
+    "pianeta": "Galvan B"
   },
   {
     "nome": "Ghostfreak",
     "specie": "Ectonurite",
-    "pianeta": "Anur Phaetos",
+    "pianeta": "Anur Phaetos"
   },
   {
     "nome": "Wildmutt",
     "specie": "Vulpimancer",
-    "pianeta": "Vulpin",
+    "pianeta": "Vulpin"
   }
 ]
-

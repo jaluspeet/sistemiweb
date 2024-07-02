@@ -2,7 +2,7 @@ const HomePage = {
   template: `
     <div class="container">
         <div class="row">
-            <div class="container col-lg-12">
+            <div class="container col-lg-12 p-4">
                 <section class="article-box p-4">
                     <h1>Cos'è PixiJS?</h1>
                     <p>
@@ -17,7 +17,7 @@ const HomePage = {
         </div>
 
         <div class="row">
-            <div class="container col-lg-12">
+            <div class="container col-lg-12 p-4">
                 <section class="article-box p-4">
                     <h1>Esempi di utilizzo</h1>
                         <p>

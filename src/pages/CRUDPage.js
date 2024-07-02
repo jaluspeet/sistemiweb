@@ -5,7 +5,7 @@ const CRUDPage = {
     <div class="container">
       <div class="row">
         <div class="container col-lg-6 p-4">
-          <div class="article-box p-4">
+          <div class="container article-box p-4">
             <table class="table table-responsive table-hover">
               <thead>
                 <tr>
@@ -15,7 +15,7 @@ const CRUDPage = {
                   <th scope="col" @click="sortBy('freschezza')">Freschezza <span v-if="sortColumn === 'freschezza'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span></th>
                 </tr>
               </thead>
-              
+
               <tbody>
                 <tr v-for="(fruit, index) in sortedFruits" :key="index">
                   <td><input type="checkbox" :value="fruit" v-model="selectedFruits" /></td>
@@ -38,7 +38,7 @@ const CRUDPage = {
         </div>
 
         <div class="container col-lg-6 p-4">
-          <section class="article-box p-4">
+          <section class="container article-box p-4">
             <h2 class="text-adaptive">Aggiungi / Elimina</h2>
             <label class="text-adaptive">Nome:</label>
             <input v-model="newFruit.name" class="form-control"/>
@@ -154,7 +154,7 @@ const CRUDPage = {
         pixiFruttaDiv.style.display = 'none';
       }
     }
-  }, 
+  },
 };
 
 export default CRUDPage;
