@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #d35bb9;
-    --primary-color-alt: #ee6897;
-    --box-color:  #a69dab66;
-    --border-color: #dfa5ff66;
+    --primary-color: #f2a6e2;
+    --primary-color-alt: #e484a6;
+    --box-color:  #e6d0f2;
+    --border-color: #d4b7e4;
     --solid-color: #eeeeee;
 
     --text-color: #5a4263;
@@ -13,8 +13,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --box-color: #4c3f5266;
-        --border-color: #4c3f5266;
+        --box-color: #4e4155;
+        --border-color: #403545;
         --solid-color: #191919;
 
         --text-color: #eeeeee;
