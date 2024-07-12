@@ -1,4 +1,6 @@
 const CRUDPage = {
+
+  // il JSON viene passato come prop da main.js
   props: ['state'],
 
   template: `
@@ -7,6 +9,7 @@ const CRUDPage = {
         <div class="container col-lg-6 p-4">
           <div class="container article-box p-4">
             <table class="table table-responsive table-hover">
+              
               <thead>
                 <tr>
                   <th scope="col"><input type="checkbox" @click="selectAllFruits"/></th>
@@ -19,31 +22,39 @@ const CRUDPage = {
               <tbody>
                 <tr v-for="(fruit, index) in sortedFruits" :key="index">
                   <td><input type="checkbox" :value="fruit" v-model="selectedFruits" /></td>
+
                   <td @click="editField(index, 'name')">
                     <span v-if="!isEditing(index, 'name')">{{ fruit.name }}</span>
                     <input v-else v-model="fruit.name" @blur="stopEditing" />
                   </td>
+
                   <td @click="editField(index, 'gusto')">
                     <span v-if="!isEditing(index, 'gusto')">{{ fruit.gusto }}</span>
                     <input v-else type="number" v-model="fruit.gusto" @blur="stopEditing" />
                   </td>
+
                   <td @click="editField(index, 'freschezza')">
                     <span v-if="!isEditing(index, 'freschezza')">{{ fruit.freschezza }}</span>
                     <input v-else type="number" v-model="fruit.freschezza" @blur="stopEditing" />
                   </td>
                 </tr>
               </tbody>
+
             </table>
           </div>
         </div>
 
         <div class="container col-lg-6 p-4">
+  
           <section class="container article-box p-4">
             <h2 class="text-adaptive">Aggiungi / Elimina</h2>
+
             <label class="text-adaptive">Nome:</label>
             <input v-model="newFruit.name" class="form-control"/>
+
             <label class="text-adaptive">Gusto:</label>
             <input v-model="newFruit.gusto" type="number" class="form-control"/>
+
             <label class="text-adaptive">Freschezza:</label>
             <input v-model="newFruit.freschezza" type="number" class="form-control"/>
 
