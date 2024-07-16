@@ -21,6 +21,8 @@ window.onload = async function () {
     const alieni_response = await fetch('/data/alieni.json');
     const alieniJSON = await alieni_response.json();
 
+    // Alternativamente, si sarebbe potuto utilizzare AJAX per modificare il JSON direttamente
+
     // Qui viene creato uno stato reattivo con Vue per passare a CRUDPage e frutta.js
     // lo stesso array e poterlo aggiornare in entrambi i componenti.
     const state = Vue.reactive({
