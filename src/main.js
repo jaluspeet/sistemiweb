@@ -21,7 +21,19 @@ window.onload = async function () {
     const alieni_response = await fetch('/data/alieni.json');
     const alieniJSON = await alieni_response.json();
 
-    // Alternativamente, si sarebbe potuto utilizzare AJAX per modificare il JSON direttamente
+    // NOTE: Alternativamente, si sarebbe potuto utilizzare AXIOS
+    // per modificare il JSON direttamente senza l'utilizzo di props, come mostrato in questo esempio:
+    
+    /*
+    (axios importato via cdn in index.html)
+
+    const axios = require('axios');
+    const frutta_response = await axios.get('/data/frutta.json');
+    const fruttaJSON = frutta_response.data;
+
+    const alieni_response = await axios.get('/data/alieni.json');
+    const alieniJSON = alieni_response.data;
+    */
 
     // Qui viene creato uno stato reattivo con Vue per passare a CRUDPage e frutta.js
     // lo stesso array e poterlo aggiornare in entrambi i componenti.
