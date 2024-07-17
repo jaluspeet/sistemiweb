@@ -159,6 +159,7 @@ export const pixiFrutta = (app, options, container) => {
             case "limone": return "🍋";
             case "mango": return "🥭";
             case "cocomero": return "🍉";
+            case "anguria": return "🍉";
             default: return "❓";
         }
     }
